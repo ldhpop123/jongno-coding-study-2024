@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+        var b = "10";
+        var b1 = 10;        
+        
+        var r = b === 10; // b가 문자형으로 false
+        var r1 = b1 === 10; // b1은 같은 숫자형으로 true
+        var r2 = b !== 10; // b는 문자형인데 수가 같지 않아서 true
+        var r3 = b1 !== 10; // 숫자형은 같은데 수가 같아서 false 
+
+       document.write(r,"<br>", r1, "<br>", r2, "<br>", r3);
+
+    </script> -->
+
+    <script>
+        var a = 10;
+        var b = 20;
+        var c = 30;
+        var d = 40;
+        var result
+
+        result = a>b || c<=d || c<a; // f || t || f
+        document.write(result, "<br>"); // t
+
+        result = a>b || c===d || a>=c; // f || f || f
+        document.write(result, "<br>"); // f
+
+        result = c>d && c!=b && d>a; // f &&  t && t
+        document.write(result, "<br>"); // f
+
+        result = a===a && d===d && c===c; // t %% t %% t 
+        document.write(result, "<br>"); // t
+
+        result = !(a===a); // t
+        document.write(result); // f
+        
+        
+    </script>
+
+</body>
+</html>
