@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+        var walkamount = prompt("하루에 얼마나 걸으시나요?", "0");
+        
+        if(walkamount>=10000)
+        {
+            document.write("매우 좋은 습관을 지니고 계시는군요!!", "<br>")
+        }
+        document.write('======= End ========')
+    </script> -->
+
+    <!-- <script>
+
+    var mon = prompt("어느계절을 좋아하시나요?", "0");
+
+    if(mon >= 3 || mon <= 5)
+    {
+    document.write("햇살 가득한 봄이네요");
+    }
+    
+    else if(mon >= 6 || mon <= 8)
+    {
+    document.write("여행가기도 좋은 여름이네요!");
+    }
+    
+    else if(mon >= 9 || mon <= 11)
+    {
+    document.write("독서의 계절 가을이네요");
+    }
+    
+    else
+    {
+    document.write("스키의 계절 겨울이네요!!")
+    }
+    </script> -->
+
+    <script>
+        var id = 'ldh060719';
+        var pw = 'ldh060719!';
+
+        var in_id = prompt("아이디를 입력해주세요", '');
+        var in_pw = prompt("비밀번호를 입력해주세요", '');
+
+        if (in_id == id)
+        {
+	        if(in_pw == pw)
+	        {
+		        document.write(in_id+"님 환영합니다.");
+	        }
+            else
+            {
+                document.write("비밀번호가 일치하지 않습니다.");
+                location.reload();
+            }
+        }
+        else
+        {
+            document.write("아이디가 존재하지 않습니다.");
+            location.reload();
+        }
+    </script>
+
+
+</body>
+</html>
