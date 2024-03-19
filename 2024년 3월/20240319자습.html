@@ -41,7 +41,7 @@
     }
     </script> -->
 
-    <script>
+    <!-- <script>
         var id = 'ldh060719';
         var pw = 'ldh060719!';
 
@@ -65,8 +65,147 @@
             document.write("아이디가 존재하지 않습니다.");
             location.reload();
         }
+    </script> -->
+
+    <!-- <script>
+        var site = prompt('네이버, 다음, 네이트, 구글 중 \
+즐겨 사용하는 포털 검색 사이트는?', '');
+        var url;
+
+        switch(site)
+        {
+            case '구글' : url = 'www.google.com';
+            break;
+
+            case '다음' : url = 'www.daum.net';
+            break;
+
+            case '네이트' : url = 'www.nate.com';
+            break;
+
+            case '네이버' : url = 'www.naver.com';
+            break;
+            default: alert("보기 중에 없는 사이트입니다.");
+        }
+    
+        if(url) location.href = "http://" + url;
+
+    </script> -->
+<!-- 
+    <script>
+        
+        var i = 1;
+        while(i<=10)
+        {
+            document.write("안녕하세요" + i, "<br />"); // <br /> 이건 뭐임?
+            i++;
+        }
+        document.write('===== the end =====');
+
+    </script> -->
+
+    <!-- <script>
+        var i = 1;
+
+        while(i<=30)
+        {
+            if(i % 2 == 0 && i % 6 == 0) // 6, 12, 18, 24, 30
+            {
+                document.write(i, "<br />");
+            }
+            i++;
+        }
+
+    </script> -->
+
+    <!-- <script>
+        
+        var i = 20;
+        
+        while(i>=10) // 10, ..... 20
+        {
+            if(i % 2 == 0) // 10, 12, 14, 16, 18, 20
+            {
+                document.write("<p style = 'color : blue;'>" + i + "</p>"); 
+            }
+            else // 11, 13, 15, 17, 19
+            {
+                document.write("<p style = 'color : red;'>" + i + "</p>");
+            }
+            i--;
+        }
+
+    </script> -->
+
+    <!-- <script>
+        var i = 1;
+
+        do
+        {
+            document.write("hello!!" + i, "<br>");
+            i++
+        }
+        while (i<=3)
+
+    </script> -->
+
+    <!-- <script>
+
+        for(var i = 1; i <= 10; i++) // 초깃값-조건식-자바스크립트-증감식-조건식
+        {
+            document.write("반복" + i, "<br>"); //초깃값이 조건식을 만족하면 중괄호 실행후 증감식 거쳐 다시 조건문으로 들어감
+        }
+    </script>     -->
+
+    <!-- <script>
+
+        for(var i =1; i <= 100; i++)
+        {
+            if(i )
+            
+            if(i % 5 == 0 && i % 7 != 0) // 5의 배수면서 7의 배수가 아닌경우 && 둘중 하나라도 false면 값은 false
+            {
+                document.write("<p style ='color:red;'>"+i+"</p>");
+            }
+            else if(i % 7 == 0 && i % 5 != 0) //7의 배수면서 5의 배수가 아닌경우
+            {
+                document.write("<p style ='color:green;'>"+i+"</p>");
+            }
+            else if(i % 7 == 0 && i % 5 == 0) // 7,5의 배수인 경우
+            {
+                document.write("<p style ='color:blue;'>"+i+"</p>");
+            }
+        }
+    </script> -->
+
+    <!-- <script>
+        for(var i = 1; i <= 10; i++)
+        {
+            if(i == 6) break;
+            document.write(i, "<br>");
+        }
+        document.write("the end")
+    </script> -->
+
+    <!-- <script>
+        for(var i = 1; i <= 10; i ++)
+        {
+            if(i % 2 == 0) continue; //true일때 증감식을 다시한번 거치고 다음 코드 실행 
+            document.write(i, "<br>");
+        }
+        document.write("the end")
+    </script> -->
+
+    <script>
+        for(var i = 1; i <= 3; i++) // 3
+        {
+            for(var k =1; k <= 2; k++) // 2
+            {
+                document.write(i + "행" + k + "열", "<br>"); // 1-1 1-2, 2-1 2-2, 3-1 3-2
+            }
+            document.write("<br>");
+        }
+
     </script>
-
-
 </body>
 </html>
