@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>적정 체중 테스트기</title>
+</head>
+<body>
+    <script>
+        var 이름 = prompt('이름을 입력해주세요.');
+        var 신장 = prompt("신장을 입력해주세요.");
+        var 체중 = prompt("체중를 입력해주세요.");
+        
+        var 적정체중 = (신장-100) * 0.9;
+        var 초과체중
+        
+        
+
+        document.write("신장: ", 신장, "(cm)<br>");
+        document.write("체중: ", 체중, "(kg)<br>");
+        document.write("적정 체중: (", 신장, "-100) x 0.9 = ", 적정체중,"(kg)<br>");
+        
+        if(체중 > 적정체중)
+        {
+            var 초과체중 = 체중 - 적중체중
+            document.write("결과: 적정 체중은 ", 적정체중, "kg이며, 적정 체중에서 ", 초과체중, "kg 초과한 것을 알 수 있습니다.<br>");
+        }
+        else if(체중 == 적정체중)
+        {
+            document.write("결과: 적정 체중은 ", 적정체중, "kg이며, 적정 체중입니다.<br>");   
+        }
+        else
+        {
+            var 초과체중 = 적정체중 - 체중
+            document.write("결과: 적정 체중은 ", 적정체중, "kg이며, 적정 체중에서 ", 초과체중, "kg 미만인 것을 알 수 있습니다.<br>");
+        }
+
+        
+        초과체중 = 체중 >= 적정체중 -5 && 체중 <= 적정체중+5; //오차 범위 +-5 &&는 논리 연산자 둘중 하나라도 false면 false출력
+        
+        if(초과체중 == false)
+        {
+            document.write('정상 체중이 아닙니다.(if문)<br>');
+        }
+        else
+        {
+            document.write('정상 체중입니다.(if문)<br>');
+        }
+        
+        
+        
+        //if문으로도 받을수도 있는데
+        
+        
+        초과체중 = 초과체중? '정상 체중입니다.(삼항조건 ?)': '정상 체중이 아닙니다.(삼항조건 ?)';
+        document.write(이름, '님은 ', 초과체중,'<br>');
+
+        
+
+    </script>
+</body>
+</html>
