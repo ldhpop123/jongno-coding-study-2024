@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        function calc()
+        {
+            let num1 = prompt("첫번째 수를 넣어주세요.",);
+            Number(num1)
+            let num2 = prompt("두번째 수를 넣어주세요.", );
+            Number(num2)
+            let num3 = prompt("더하기 +, 빼기 -, 곱하기 *, 나누기 %", );
+            Number(num3)
+            
+            document.write(num1, num3, num2);
+            
+        };
+        
+        
+        let id = "123";
+        let pw = "123";
+        
+        let userId= prompt("아이디를 입력해주세요.","");
+        
+
+        if(id == userId)
+        {
+            let userPw= prompt("비밀번호를 입력해주세요.","");
+            if(pw == userPw)
+            {
+                document.write(userId + "님 환영합니다.<br><br>");
+                let result = calc();
+        
+            }
+            
+            else
+            {
+                alert("비밀번호가 틀립니다.");
+                location.reload();
+            };
+        }
+        
+        else
+        {
+            alert("아이디가 존재하지 않습니다.");
+            location.reload();
+        };
+
+
+    </script>
+    
+
+</body>
+</html>
