@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        
+        document.write("<h1>컴퓨터 가위, 바위, 보</h1>");
+
+        let game = prompt("가위, 바위, 보 중 선택하세요?", "가위");
+        let gameNum;
+        let result;
+
+        switch (game)
+        {
+            case "가위":
+                gameNum = 1 , result = "가위"; break;
+            case "바위":
+                gameNum = 2 , result = "바위"; break;
+            case "보":
+                gameNum = 3 , result = "보"; break;
+            default: alert("잘못 작성하셨습니다.");
+                location.reload();
+        }
+
+        document.write("컴퓨터의 결과는 " + result + "입니다.<br><br>");
+
+        let com = Math.ceil(Math.random()*3);
+        console.log(com)
+
+        if (gameNum == com )
+        {
+            result = "당첨"
+        }
+        else
+        {
+            result = "낙첨"
+        }
+       
+        document.write("결과는 "+ result + "입니다.");
+    </script>
+
+</body>
+</html>
