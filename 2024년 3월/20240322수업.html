@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let old = prompt('나이는 ?');        
+        // let result;
+        
+        // console.log('안녕','하세요');
+        // console.log('콘솔 로그 사용해봅니다.');
+        // document.write('<h1>제 나이는 ', old, '입니다.</h1>');
+        // if (old < 20)
+        // {
+        //     document.write('<h1>미성년자 입니다.</h1>');
+        //     result = 20 - old
+        
+        // }
+        // else 
+        // {
+        //     document.write('<h1>성인 입니다.</h1>');
+        // }  
+
+        // D-day 계산기
+
+        let nowDate = new Date();
+        let nowYear = nowDate.getFullYear();
+        let nowDay = nowDate.getDay();
+        let result
+
+        let num = 123
+
+        let thedate = prompt("원하시는 날짜를 입력해주세요", 'yyyy/mm/dd');
+        theDate = new Date(thedate);
+        let theDay = theDate.getDay();
+
+        let resultY = Math.floor((theDate.getTime() - nowDate.getTime()) / (60 * 1000 * 60 * 24 * 365));
+        let resultD = Math.ceil((theDate.getTime() - nowDate.getTime()) / (60 * 1000 * 60 * 24));
+        
+        
+
+        document.write(thedate, "까지 ", resultY,"년 ",resultD - (resultY* 365), "일 남았습니다.");
+
+
+       console.log(typeof num);
+
+        
+
+        
+
+    </script>
+</body>
+</html>
