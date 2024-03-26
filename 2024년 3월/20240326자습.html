@@ -71,32 +71,37 @@
         // let result = userNum.substring(0, userNum.length-4) +'****';
         // document.write(result, '<br>');
 
-        let userEmail = prompt('당신의 이메일을 주소는?', "");
-        let arrUrl = ['.co.kr','.com','.net','.or.kr','.go.kr'];
+        // let userEmail = prompt('당신의 이메일을 주소는?', "");
+        // let arrUrl = ['.co.kr','.com','.net','.or.kr','.go.kr'];
 
-        let check1 = false;
-        let check2 = false;
+        // let check1 = false;
+        // let check2 = false;
 
-        if (userEmail.indexOf('@') > 0)
-        {check1 = true;}
+        // if (userEmail.indexOf('@') > 0)
+        // {check1 = true;}
 
-        for (let i = 0; i < arrUrl.length; i++)
-        {
-            if (userEmail.substring(arrUrl[i]) > 0)
-            {
-                check2 = true;
-            }
+        // for (let i = 0; i < arrUrl.length; i++)
+        // {
+        //     if (userEmail.indexOf(arrUrl[i]) > 0)
+        //     {
+        //         check2 = true;
+        //     }
             
-        }
+        // }
 
-        if (check1 && check2)
-        {
-            document.write(userEmail);
-        }
-        else
-        {
-            alert('이메일 형식이 잘못되었습니다.');
-        }
+        // if (check1 && check2)
+        // {
+        //     document.write(userEmail);
+        // }
+        // else
+        // {
+        //     alert('이메일 형식이 잘못되었습니다.');
+        // }
+    
+        window.open('https://github.com/ldhpop123/jongno-coding-study-2024', 'github', "width=350, height=400, left=50, top=10, scrollbars=no")
+        // 팝업
+
+        
     </script>
 </body>
 </html>
