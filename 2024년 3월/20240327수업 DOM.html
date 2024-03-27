@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 개념 첫 시간</title>
+</head>
+<body>
+    <h1>DOM 다뤄보기</h1>
+    <h2>DOM의 개념</h2>
+    <p>DOM : Document Object Model</p>
+    
+    <div>
+        <p>dom의 기본조작</p>
+        <p>css 조작 등</p>
+    </div>
+
+    <script>
+        // 1. 선택한다
+        let 선택한놈;
+
+        선택한놈 = document.querySelector("h1")
+        console.log(선택한놈)
+        // 2. 선택한놈을 조작
+        선택한놈.style.color = "red"
+        선택한놈.style.backgroundColor = "aqua"
+    
+    </script>
+    
+</body>
+</html>
