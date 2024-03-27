@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0327 js 함수 수업</title>
+</head>
+<body>
+    <script>
+        
+        
+        // let 키 = prompt("키를 입력해주세요", "");
+        // let 정상몸무게;
+        // 정상몸무게 = (키 - 100)*0.9;
+        // let 몸무게 = prompt("몸무게를 입력해주세요", "");
+        
+        // console.log(정상몸무게)
+        
+        // if (((정상몸무게+5)>= 몸무게)&&((정상몸무게-5) <= 몸무게)) {
+        //     document.write("정상입니다 범위 정상몸무게 +- 5");
+        // }
+        // else {
+        //     document.write("비정상입니다")
+        // }
+        
+
+        let 키;
+        let 체중;
+        let 정상체중;
+
+        function 정상체중구하기(이름, 키, 체중) {
+            
+            정상체중 = (키 - 100)*0.9
+            console.log(이름, "님의 정상 체중은", 정상체중, "입니다");
+            if(체중 > 정상체중) {
+                console.log(이름, '님의 정상 체중과의 차이는', Math.round(체중 - 정상체중), '많습니다');
+            }
+            else if (체중 < 정상체중) {
+                console.log(이름, '님의 정상 체중과의 차이는', Math.round(정상체중 - 체중), '적습니다');
+            }
+            else {
+                console.log(이름, '님의 정상 체중과의 차이는 0입니다');
+            }
+            
+
+        }
+        console.log('병윤이 데이터')
+        let BY = 정상체중구하기("구병윤", 169, 55)
+        
+        console.log('유찬이 데이터')
+        let YC = 정상체중구하기("김유찬", 165, 48)
+        
+        console.log('내 데이터')
+        let DH = 정상체중구하기('이동휘', 173, 65)
+    
+    </script>
+</body>
+</html>
