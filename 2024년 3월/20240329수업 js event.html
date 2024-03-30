@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button 
+    style="width: 200px; 
+    height: 100px; 
+    background-color: aqua; 
+    color: blue;
+    border: 1px solid #ccc;">
+    버튼입니다</button>
+
+    <button>버튼</button>
+
+    <script>
+        // 이벤트 사용법. 해당 태그에 이벤트을 추가해주면 됨.
+
+        // 1. 지정한다
+        let b;
+        let b1;
+        b = document.querySelector('button');
+        // 2. 조작한다 (이벤트를 추가)
+        // Event Listener : 이벤트를 듣고, 그에 따른 동작을 실행.
+        // addEventListener('이벤트 종류', 동작)
+        b.addEventListener('click', function() {
+            console.log('버튼 클릭 이벤트 실행');
+            // alert('버튼 클릭함');
+            
+        });
+        
+        b.addEventListener('mouseover', function () { // mouseover : 마우스를 위에 올린다
+            console.log('마우스 갖다 댐')
+            b.style.backgroundColor = 'aquamarine'
+        });
+
+        b.addEventListener('mouseout', function(){ // 마우스 나갔을때
+            console.log('마우스 나감')
+            b.style.backgroundColor = "aqua"
+        });
+        
+        b.addEventListener('mousedown', function(){
+            console.log('mousedown 실행')
+            
+        });
+
+        b.addEventListener('mouseup', function(){
+            console.log('mouseup 실행')
+        });
+        
+    </script>
+</body>
+</html>
