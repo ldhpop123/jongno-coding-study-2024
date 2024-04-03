@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        h2 {
+            color: aquamarine;
+        }
+    
+        #b1 {
+            background-color: blue;
+
+            width: 300px;
+            height: 150px;
+        }
+    
+        * {
+            margin: 10px;
+            padding: 10px;
+        }
+    
+        .main {
+            border: 1px solid black;
+            border-radius: 10px;
+            width: 500px;
+            text-align: center;
+            padding: 30px;
+            margin: 100px;
+            text-decoration: overline underline;
+        }
+        
+        .one {
+            background-color: aquamarine;
+        }
+
+        .two {
+            background-color: aqua;
+        }
+
+        .three {
+            background-color: magenta;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <h1 style="color: rgb(172, 213, 246);">h1 태그</h1>
+    <h1 style="color: #0ab0f0;">123</h1>
+
+    <h1>h1태그 내에서 <span style="color: #0ab0f0;">원하는 부분에만</span> 색깔을 주려면?</h1>
+    <!--span태그 태그자체는 아무기능이 없지만 이런식으로 사용가능-->
+
+    <h2>안녕하세요</h2>
+
+    <button id="b1">버튼</button>
+
+    <h1 class="main one">메인</h1>
+    <h1 class="main two">메인</h1>
+    <h1 class="main three">메인</h1>
+
+    <script>
+        
+        let b1 = document.querySelector('#b1')
+        
+        b1.addEventListener('mouseover', () => {
+            console.log('버튼위에 마우스 올라옴')
+            b1.style.width = '305px'
+            b1.style.height = '155px'
+            b1.style.margin = '7.5px'
+        });
+
+        b1.addEventListener('mouseout', () => {
+            console.log('버튼위에 마우스 올라옴')
+            b1.style.width = '300px'
+            b1.style.height = '150px'
+            b1.style.margin = '10px'
+        });
+    
+        b1.addEventListener('click', () => {
+            console.log('버튼위에 클릭됨')
+        });
+    
+    </script>
+
+    
+
+</body>
+</html>

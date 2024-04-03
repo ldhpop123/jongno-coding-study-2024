@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="text-align : center; color:  rgb(255,255,255); background-color: aqua; width : 300px;">rgb</h1>
+    <h2 style="color : #1515cb;">16진수로 색깔을 표현</h2>
+
+    <div id="box" style=
+        "background-color: aquamarine; 
+        color: aqua;
+        width: 300px; 
+        text-align: center;">
+        <h1>안녕하세요</h1>
+    </div>
+    <script>
+    
+    let h1 = document.querySelector('h1')
+    let b = document.querySelector('#box')
+
+    b.addEventListener('mouseover', function() {
+        console.log('안녕하세요 박스에 마우스 올라옴')
+        b.style.backgroundColor = "aqua"
+        b.style.color = "aquamarine"
+    });
+    
+    b.addEventListener('mouseout', function() {
+        console.log('안녕하세요 박스에 마우스 나감')        
+        b.style.backgroundColor = 'aquamarine'
+        b.style.color = "aqua"
+    });
+    
+    h1.addEventListener('mouseover', function () {
+        console.log("마우스 올라옴")
+        h1.style.color = "#1515cb"
+    });
+
+    h1.addEventListener('mouseout', function (){
+        console.log('마우스 나감')
+        h1.style.color = 'rgb(255,255,255)'
+    });
+    </script>
+
+    <span>
+        <h1>span태그는 무엇일까</h1>
+    </span>
+
+</body>
+
+</html>
