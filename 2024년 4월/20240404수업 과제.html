@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .LS {
+            font-size: 18px;
+            display: inline-block;
+        }
+        
+        .BS {
+            font-size: 35px;
+            color: rgb(28, 119, 119);
+            display: inline-block;
+        }
+        
+        .header {
+            border: 1px solid red;
+            padding: 10px;
+        }
+
+        .header > h1 {
+            display: inline-block;
+        }
+
+        .header > a {
+            color: aquamarine;
+        }
+        
+        .header > div > p {
+            border: 3px solid aquamarine;
+            width: 50%;
+        }
+
+        .nav {
+            border: 3px solid aqua;
+            background-color: aquamarine;
+        }
+
+        .navH1 {
+            text-align: center;
+        }
+        
+        #s1 {
+            border: 3px solid aquamarine;
+            background-color: aqua;
+            padding: 10px;
+        }
+        
+        #s1 > img {
+            width: 200px;
+        };
+
+        main > #s2 {
+            border: 3px solid aqua;
+            background-color: aquamarine;
+        }
+        
+        .s2 {
+            
+            border: 3px solid aqua;
+            background-color: aquamarine;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        
+        .s2 > article {
+            background-color: antiquewhite ;
+        }
+        .footer{
+            background-color: antiquewhite;
+        }
+    </style>
+
+</head>
+<body>
+    <header class="header">
+        
+        <h1 class="BS">header</h1><h1 class="LS">태그 부분</h1>
+        
+        <p><b>header 태그에 테두리, 내부여백 적용할것</b></p>
+    
+        <u><a target="_blank" href="https://www.naver.com/">네이버 링크, 클릭시 새 탭으로 연결되도록 할것</a></u>
+        <div>
+            <p>p태그, 테두리 적용, 너비 50%로 적용</p>
+        </div>
+    
+        <nav class="nav">
+            <h3>nav 태그로 만든 영역</h3>
+            <ul>
+                <li>ul과 li로 만든 리스트</li>
+                <li>ul 태그 내부에 li태그가 들어감</li>
+                <h1 class="navH1">class를 활용하여 스타일을 적용할것</h1>
+            </ul>
+        </nav>
+    </header>
+<hr>
+    <main>
+        <section id="s1">
+            <p class="BS">main</p><p class="LS"><b>태그 내부의 첫번쩨</b></p><p class="BS">section</p><p class="LS"><b>태그. 이 section에는 id를 통해 스타일을 적용할것</b></p>
+            <p id="sectionP"><b>내부 여백, 테두리 스타일 적용</b></p>
+            <p ><b>원하는 사진 넣기(이미지에 따라 사이즈 조절 필요)</b></p>
+            <img src="data:image/png;base64,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" alt="">
+            <ul>
+
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>javascript</li>
+            
+            </ul>
+        </section>
+<hr>
+        <section class="s2">
+            <p class="BS"> main</p><p class="LS"><b> 태그 내부의 두번째</b></p><p class="BS"> section</p><p class="LS"><b> 태그.</b></p>
+            <p>이 section에는 클래스를 통해 스타일을 적용할 것</p>
+            <article>
+                <p>section 태그 내부의 article태그 1</p>
+                <p>내부여백 적용할것</p>
+                <img src="data:image/png;base64,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" alt="">
+                <img src="data:image/png;base64,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" alt="">
+                <p>사진 두개 넣음</p>
+            </article>
+
+            <article>
+                <p>section 태그 내부의 article태그 2</p>
+                <p>내부여백 적용할것</p>
+                <img src="data:image/png;base64,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" alt="">
+                <p>사진 넣음</p>
+            </article>
+        </section>
+    </main>
+<hr>
+    <footer style="background-color: antiquewhite;
+    padding: 10px;">
+        <p class="BS">footer태그</p>
+        <p>배경색, 내부여백 넣기</p>
+        <h3>footer 영역은 보통 맨 밑 저작권, 연락처 등이 표시됨</h3>
+
+    </footer>
+</body>
+</html>
