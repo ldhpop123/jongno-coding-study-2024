@@ -1,0 +1,53 @@
+#title1 {
+    color: magenta;
+    
+    font-size: 20pt;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-shadow: 0px 0px 10px magenta;
+}
+
+#title2 {
+    color: violet;
+    font-size: 20pt;
+    font-weight: bold;
+    line-height: 200px;
+    text-decoration: overline;
+}
+
+#title3 {
+    letter-spacing: 20px;
+}
+
+#title4 {
+    background-color: blueviolet;
+    
+    font-size: 20pt;
+    text-align: center;
+
+    width: 300px;
+    height: 300px;
+
+    line-height: 300px;
+}
+
+#title5 {
+    text-decoration:line-through; /*del 아니농*/
+}
+
+#title6 {
+    font-style: italic;
+}
+
+#title7 {
+    color: magenta;
+    font-size: 20pt;
+    text-shadow: 0px 0px 10px magenta; /* offset-x offset-y blur color*/
+} /*x,y 0주고 흐림 설정하는 네온 
+느낌남 이쁜데?
+저 번지는 느낌이 좋음*/
+
+#list1 {
+    list-style: none;
+} /*list-style: none
+많이 씀*/

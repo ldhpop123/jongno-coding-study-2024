@@ -1,0 +1,35 @@
+#title1 {
+    border: 5px solid black;
+    width: 800px;
+    text-align: center;
+    font-size: 35pt;
+    line-height: 100px;
+
+    font-family: "Black Han Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    text-shadow: 2px 2px magenta;
+    color: white;
+}
+
+#list1 {
+    font-weight: 900;
+
+    font-size: 20px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+#list2 {
+    font-size: 13pt;
+    line-height: 30px;
+    font-style: italic;
+}
+
+#p {
+    letter-spacing: 5px;
+    text-decoration: underline;
+}
