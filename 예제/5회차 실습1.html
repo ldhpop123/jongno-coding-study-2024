@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5회차 실습1</title>
+</head>
+
+<body>
+    <form>
+        <fieldset>
+            <legend style="font-size: 40pt; font-weight: 600;"> 회원가입 페이지</legend>
+            <div>
+                <h1>로그인 정보</h1>
+                <label><b>ID 입력</b> <input type="text" placeholder="최대 10자"></label>
+                <br>
+                <label><b>비밀번호</b> <input type="password" placeholder="영어, 숫자 섞어서"></label>
+                <label><b>비민번호 확인</b> <input type="password" placeholder="영어, 숫자 섞어서"></label>
+            </div>
+
+            <hr>
+
+            <div>
+                <h1>개인정보</h1>    
+                <p><b>주소</b></p>
+                <input type="text">
+                <p><b>연령대</b></p>
+                <label>10~19<input type="radio" name="age" value="10~19"></label> 
+                <label>20~29<input type="radio" name="age" value="20~29"></label>
+                <label>30~39<input type="radio" name="age" value="30~39"></label>
+                <label>40~49<input type="radio" name="age" value="40~49"></label>
+                <label>50이상<input type="radio" name="age" value="50~"></label>
+                <br>
+                <p><b>성별</b></p>
+                <label>남<input type="radio" name="gender" value="man"></label> 
+                <label>여<input type="radio" name="gender" value="woman"></label>                 
+                <br>
+                <p><b>취미</b></p>
+                <label>게임<input type="checkbox" value="game"></label> 
+                <label>유튜브<input type="checkbox" value="youtube"></label> 
+                <label>잉여짓<input type="checkbox" value="ing"></label> 
+                <label>운동<input type="checkbox" value="exr"></label> 
+                <label>독서<input type="checkbox" value="exr"></label> 
+                <label>여행<input type="checkbox" value="trv"></label> 
+                <label>창작<input type="checkbox" value="craft"></label>
+                <br>
+                <br>
+            </div>
+            <hr>
+           <div>
+                <input type="submit" value="회원 가입">
+                <input type="reset" value="다시 입력">
+            </div>
+        </fieldset>
+            
+    </form>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/2024년 4월/20240411수업 폼 CSS.css">
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <legend>제목1</legend>
+            
+            <label for="아이디입력">ID : <input type="text" name="아이디입력칸" id="아이디입력" placeholder="아이디 입력하세요">    </label>
+            <br>
+            <label for="비밀번호입력">PW : <input type="password" name="비밀번호입력칸" id="비밀번호입력" placeholder="비번 입력하세요">    </label>
+            <br>
+            <label for="이메일입력">email : <input type="email" name="이메일입력칸" id="이메일입력" placeholder="이메일 입력하세요">    </label>
+            <br>
+            <label for="전화번호입력">휴대폰 : <input type="tel" name="전화번호입력칸" id="전화번호입력" placeholder="전화번호 입력하세요">    </label>
+            
+        </fieldset>
+        
+        <fieldset style="padding: 20px;">
+
+            <legend>점메</legend>
+            <label for=""><input type="checkbox" name="" value="chicken">치킨</label>
+            <label for=""><input type="checkbox" name="" value="pizza">피자</label>
+            <label for=""><input type="checkbox" name="" value="jok">족발</label>
+            <label for=""><input type="checkbox" name="" value="tteok">떡순튀</label>
+            
+            <label for="chicken"><input type="checkbox" id="chicken" value="chicken">치킨</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>radio</legend>
+            <label><input type="radio" name="소속" value="aiComputer" checked>AI 컴퓨터과</label>
+            <label><input type="radio" name="소속" value="computerSecurity">컴퓨터 보안과</label>
+            <label><input type="radio" name="소속" value="mediaCreator">미디어 크리에이터과</label>
+
+        </fieldset>
+        
+        <label for=""><input type="text" placeholder="안녕"></label>
+
+        <input type="reset" value="초기화">
+    </form>
+</body>
+</html>
