@@ -1,0 +1,15 @@
+#table {
+    text-align: center;
+    font-size: 20pt;
+    border-collapse: collapse;
+    border: solid black 2px;
+}
+
+tr {
+    height: 80px;
+}
+
+td {
+    border: dotted black 2px;
+    border-spacing: 30px;
+}
