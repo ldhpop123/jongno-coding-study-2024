@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+
+            width: 200px; 
+            height: 200px; 
+            background-color: magenta;
+            text-align: center;
+            line-height: 200px;
+            font-weight: bold;
+
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="box">박스</div>
+
+    <script>
+        
+        calc(1, 5);
+        calc(10, 1000);
+        
+        function calc(a, b) {
+            let result = (a + b);
+            console.log(result);
+        };
+
+        let 변수 = function () {
+            let a;
+            let b;
+            console.log(a, b)
+        };
+
+    // 함수도 일종으이 데이터로 취급하여 할당하는거
+    // 함수 내의 코드가 데이터로 취급된다
+
+    // event: 웹 페이지 상에서 일어나는 동작들
+    // 마우스 클릭, 드래그, 마우스 이동, 마우스 터치 등 ex) 좌클릭으로 총 쏘는거
+    // 키보드 입력. ex) w a s d
+    // 웹페이지 로딩 완료, 사이즈 변경 등등. 
+    // 이벤트가 일어날 때마다 그에 따른 동작, 코드를 실행할 수 있다.
+
+    let box = document.querySelector('.box')
+
+    box.addEventListener('mouseover', () => {
+        box.style.backgroundColor = 'aqua'
+        console.log('마우스 올라옴')
+    });
+
+    box.addEventListener('mouseout', () => {
+        box.style.backgroundColor = 'magenta'
+        console.log('마우스 나감')
+    });
+
+    </script>
+
+</body>
+</html>

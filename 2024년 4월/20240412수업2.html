@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // for (let i = 1; i <= 10; i++) {
+        //     console.log(i)
+        // }
+
+        let level = 510;
+        let xp = 99;
+
+        let levelJumping = 3;
+
+        xp += 1
+
+        
+        
+        if (xp == 100) {
+            level += 1;
+            xp = 0;
+            console.log(level)
+            console.log(xp)
+        }
+
+        level += (1*levelJumping)
+        console.log(level)
+
+        for (let i = 1; i <= 20; i++) {
+            document.write('<p class = \'box\'> '+i+'번째 경기</p>')
+        };
+
+    </script>
+</body>
+</html>
