@@ -1,0 +1,43 @@
+.b {
+    font-weight: bold;
+}
+
+.box {
+    background-color: rgb(218, 229, 237);
+    padding: 20px;
+    width: 500px;
+}
+
+.Tb {
+    color: rgb(61, 61, 215);
+    font-weight: bold;
+}
+
+.Mg {
+    padding-top: 10px;
+}
+
+#fL {
+    font-size: 35pt;
+    font-weight: bold;
+}
+
+#fM {
+    font-size: 25pt;
+    font-weight: bold;
+}
+
+.button {
+    background-color: rgb(61, 61, 215);
+    width: 200px;
+    height: 50px;
+    border: none;
+    color: #fff;
+}
+
+.tA {
+    width: 500px;
+    text-align: center;
+
+
+}
