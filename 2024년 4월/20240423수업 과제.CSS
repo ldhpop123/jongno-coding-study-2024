@@ -1,0 +1,55 @@
+.Hf1 {
+    font-size: 30pt;
+    font-weight: bold;
+}
+
+.Hf2 {
+    font-size: 20pt;
+    font-weight: bold;
+}
+
+.Gf {
+    color: gray;
+}
+
+html {
+    background-color: rgb(210, 204, 204);
+    text-align: center;
+}
+
+.box {
+    width: 60%;
+    margin-left: 20%;
+    border: 2px dotted black;
+    border-radius: 20px;
+    background-color: #fff;
+}
+
+span {
+    font-weight: bold;
+}
+
+* {
+    margin: 5px;
+    margin-top: 15px;
+}
+
+.left {
+    text-align: left;
+}
+
+.btn {
+    background-color: rgb(105, 132, 243);
+    color: #fff;
+    font-size: 15pt;
+    
+    width: 18%;
+    height: 70px;
+
+    border: none;
+    border-radius: 15px;
+}
+
+img {
+    width: 50px;
+}
