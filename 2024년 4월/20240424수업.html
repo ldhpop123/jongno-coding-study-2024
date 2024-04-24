@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6ICPumv-6odsdCvQQ2j1oWIoCPNYbyCc5h_hXukR-MptRqENEkyWxAlVfmUpC8xvqieo&usqp=CAU" width="300px">
+    <br>
+    
+    <input type="text">
+    
+    <button>데이터 입력</button>
+
+    <script>
+        let 저장용변수;
+        let 크기;
+        let 이미지 = document.querySelector('img');
+        크기 = 이미지.getAttribute('width');
+        크기 = 크기 + 100;
+        console.log(크기)
+
+        let 입력칸 = document.querySelector('input');
+
+        let 버튼 = document.querySelector('button');
+        버튼.addEventListener('click', function() {
+            
+            let 데이터 = 입력칸.value;
+            console.log(데이터);
+        });
+    </script>
+
+</body>
+</html>
