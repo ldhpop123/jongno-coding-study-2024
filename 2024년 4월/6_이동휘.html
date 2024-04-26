@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6_이동휘</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+    
+    <style>
+        *{
+            font-family: "Black Han Sans", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .box {
+            width: 25%;
+            border: 1px solid gray;
+            border-radius: 20px;
+            margin-left: 37.5%;
+
+            padding: 20px;
+        }
+        
+        .Hf {
+            font-size: 30pt;
+            font-weight: bold;
+            color: greenyellow;
+        }
+
+        .Gf {
+            color: gray;
+        }
+
+        .B {
+            font-weight: bold;
+        }
+        
+        .Hr {
+            width: 150px;
+        }
+
+        .Sl {
+            margin-right: 5px;
+            width: 80px;
+        }
+
+
+        .Bn {
+            border: none;
+        }
+
+        .Flex {
+            display: inline;
+        }
+
+        .Btn {
+            background-color: greenyellow;
+            color: #fff;
+            font-size: 20pt;
+            border: none;
+            border-radius: 10px;
+
+            width: 30%;
+            height: 50px;
+
+            margin: 15px;
+        }
+
+        .BtnBox {
+            width: 30%;
+            margin-left: 35%;
+            text-align: center;
+        }
+
+        .Ul {
+            text-decoration: underline;
+            display: inline;
+        }
+
+        .Ub {
+            border-bottom: 1px gray solid;
+            width: 180px;
+        }
+
+        .LUb {
+            border-bottom: 1px gray solid;
+            width: 80px;
+        }
+    </style>
+    
+</head>
+<body>
+    <form action="">
+        <div class="box">
+            <p class="Hf">| 자신의 프로필을 설정해주세요</p>
+            <p class="Gf">각각의 항목에 정보를 입력하세요</p>
+            <hr><br>
+
+            <p class="B">성명</p>
+            <label for="name"><input class="Bn Ub" type="text" id="name" placeholder="성명 입력"></label>
+            <br>
+
+            <p class="B">주소</p>
+            <label for="adress"><input class="Bn Ub" type="text" id="adress" placeholder="주소 입력"></label>
+            <br>
+
+            <p class="B">연락처</p>
+            <label for="tel"><input class="Bn Ub" type="tel" id="tel" placeholder="성명 입력"></label>
+            <br>
+
+            <p class="B">생년월일</p>
+            <label for="year">
+                <select name="year" id="year" class="Bn Sl">
+                    <option>연도</option>
+                    <option value="2000">2000</option>
+                    <option value="2001">2001</option>
+                    <option value="2002">2002</option>
+                    <option value="2003">2003</option>
+                    <option value="2004">2004</option>
+                    <option value="2005">2005</option>
+                    <option value="2006">2006</option>
+                </select>
+            </label>
+
+            <label for="month">
+                <select name="month" id="month" class="Bn Sl">
+                    <option>월</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+            </label>
+
+            
+            <label for="day"><input class="Bn LUb" id="day" type="text">일</label>
+            <br>
+
+            <p class="B">성별</p>
+            <label for="sex"><input type="radio" id="sex" name="sex" value="male">남</label>
+            <label for="sex"><input type="radio" id="sex" name="sex" value="female">여</label>
+            <br>
+
+            <p class="B">이메일</p>
+            <label for="email" class="label"><input class="Bn Ub" type="email" id="email" placeholder="이메일 입력"></label>
+        
+        </div>
+        <br>
+        <div class="box">
+            <p class="Hf">| 자신을 소개해 주세요</p>
+            <p class="Gf">아래의 물음에 답하세요</p>
+            <hr><br>
+
+            <p class="B">가장 마음에 드는 문구를 고르세요</p>
+            <label for="radio1"><input type="radio" name="radio1" id="radio1" value="1">어렵게 생각하지 말고 끝까지 하면 된다. 희망을 가지고 간절하고 하면 된다.</label>
+            <br>
+
+            <label for="radio1"><input type="radio" name="radio1" id="radio1" value="2">신념을 가지고 어떤 어려움에도 흔들리지 않는다.</label>
+            <br>
+
+            <label for="radio1"><input type="radio" name="radio1" id="radio1" value="3">"시계처럼 살아라" -이는 시계처럼 꾸준히 가라는 것이다. 시계처럼 시간도 지켜라.</label>
+            <br>
+
+            <label for="radio1"><input type="radio" name="radio1" id="radio1" value="4">인생도 건너뛰기가 없고 순간 나는 비약도 없다.</label>
+            <br><br>
+
+            <p class="B">위 문구를 선택한 이유를 쓰세요</p>
+            <textarea name="A" id="A" cols="70" rows="10" placeholder="500자 이내"></textarea>
+
+            <p class="B">자신의 진로 분야를 선택하세요</p>
+            
+            <label for="checkbox1"><input type="checkbox" id="checkbox1" name="checkbox1" value="프론트엔드">프론트엔드</label>
+            <label for="checkbox1"><input type="checkbox" id="checkbox1" name="checkbox1" value="보안">보안</label>
+            <label for="checkbox1"><input type="checkbox" id="checkbox1" name="checkbox1" value="백엔드">백엔드</label>
+            <label for="checkbox1"><input type="checkbox" id="checkbox1" name="checkbox1" value="인공지는">인공지능</label>
+            <label for="checkbox1"><input type="checkbox" id="checkbox1" name="checkbox1" value="기타">기타</label>
+
+            <br>
+
+            <p class="B">개발자가 되기 위한 자신의 공부 우선 순위</p>
+
+            <label for="rank1" class="B">1.<input class="Bn Ub" type="text" id="rank1"></label>
+            
+            <label for="rank2" class="B">2.<input class="Bn Ub" type="text" id="rank2"></label>
+            
+            <label for="rank3" class="B">3.<input class="Bn Ub" type="text" id="rank3"></label>
+            <br><br>
+
+        </div>
+        <br>
+        <div class="BtnBox">
+            <button class="Btn" type="submit">제출</button>
+            <button class="Btn" type="reset">초기화</button>
+        </div>
+    </form>
+</body>
+</html>

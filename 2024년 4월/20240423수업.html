@@ -4,14 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .sel {
+            border: none;
+        }
+
+        .u {
+            text-decoration: underline;
+            border: none;
+        }
+
+    </style>
 </head>
 <body>
     <form action="">
         <label for=""> 선택 
-            <select>
-                <option value="셀렉1">셀렉1</option>
-                <option value="셀렉2">셀렉2</option>
-                <option value="셀렉3">셀렉3</option>
+            <select class="sel">
+                <option value="셀렉1">1</option>
+                <option value="셀렉2">2</option>
+                <option value="셀렉3">3</option>
             </select>
         </label>
         
@@ -31,6 +42,8 @@
         <br><br>
 
         <label for=""><textarea name="" id="" cols="30" rows="10"></textarea></label>
+
+        <label for=""><input type="text"></label>
         
     </form>
 </body>
