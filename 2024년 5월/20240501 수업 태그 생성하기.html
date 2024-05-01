@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0501 태그 생성 자바스크립트</title>
+    <link rel="stylesheet" href="/2024년 5월/20240501수업 태그 생성CSS.css">
+</head>
+<body>
+
+    <div class="parent">
+        div 박스
+    </div>
+    
+    <br>
+    
+    <div class="parent2">
+        div 박스2
+    </div>
+
+    <script>
+
+        // 1. 새로운 태그 생성
+        let 새로운태그;
+        새로운태그 = document.createElement('p')
+        console.log(새로운태그)
+
+        새로운태그.textContent = '안녕하세요 새로운 태그 입니다.'
+        새로운태그.classList.add('children')
+        console.log(새로운태그)
+        
+        // 2. 만든 태그를 화면에 나타내기 : 부모에게 자식으로 만들어줘야 함
+        let box = document.querySelector('.parent')
+        box.appendChild(새로운태그) // 자식을 갖다 붙인다
+
+        // 3. 만든 태그 지우기 : 부모 기준으로
+        box.removeChild(새로운태그) // 자식 없애기
+
+        // 4. 자식 뺏기
+        let box2 = document.querySelector('parent2')
+        box2.appendChild(새로운태그) // createElement로 만든 태그는 html상에 하나만 존재 (다시 부르면 이동함) 
+    
+    </script>
+
+</body>
+</html>

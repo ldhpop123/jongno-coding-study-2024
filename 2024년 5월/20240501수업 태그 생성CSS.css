@@ -1,0 +1,18 @@
+.parent {
+    width: 400px;
+    height: 200px;
+    background-color: darkorange;
+}
+
+.parent2 {
+    width: 400px;
+    height: 200px;
+    background-color: darkgreen;
+}
+
+
+.children {
+    color: #fff;
+    font-weight: 900;
+    font-style: italic;
+}
