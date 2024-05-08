@@ -19,16 +19,16 @@
         loca = document.querySelector('#location');
 
         document.addEventListener('keydown', (e) => {
-            if (e['key'] == 'a') {
+            if (e['key'] == 'a' || e['key'] == 'A') {
                 img.src = 'https://www.gotokyo.org/kr/destinations/southern-tokyo/images/499_0354_2.jpg';
                 loca.innerHTML = '도쿄';
-            } else if (e['key'] == 's') {
+            } else if (e['key'] == 's' || e['key'] == 'S') {
                 img.src = 'https://rimage.gnst.jp/livejapan.com/public/article/detail/a/00/00/a0000110/img/basic/a0000110_main.jpg';
                 loca.innerHTML = '아키하바라';
-            } else if (e['key'] == 'd') {
+            } else if (e['key'] == 'd' || e['key'] == 'D') {
                 img.src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQu_ug1ixKYKap0w2XkJzFyG5fNPZzLeI2GrRGCrC-DcQ&s';
                 loca.innerHTML = '교토';
-            } else if (e['key'] == 'f') {
+            } else if (e['key'] == 'f' || e['key'] == 'F') {
                 img.src = 'https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcTecdXKx6MGiXlHZuO2IoDGT6WlaWkr01aZqwSSpmHvz1Kpfy1spTasRcyhWBu17lGPULQj4ZlOS0OiINjH_Zk9dHNNHPre2DYF1RC_VA';
                 loca.innerHTML = '오사카';
             };
