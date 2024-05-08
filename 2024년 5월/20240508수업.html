@@ -25,11 +25,14 @@
         }
 
         document.addEventListener('keydown', (event) => {
+            console.log(event)
             if (event['ctrlKey']) {
                 if (event['key'] == 'Control') {
                     console.log(event['key'])
-                } else if ('ctrl', event['key'] == 'ctrl c' || 'ctrl', event['key'] == 'ctrl C') {
-                    WinClose();
+                } else if (event['key'] == 'c' || event['key'] == 'C') {
+                    console.log('허허 복사 하시는 건가요?')
+                } else if (event['key'] == 'v' || event['key'] == 'V') {
+                    console.log('허허 붙여넣기 하시는 건가요?')
                 } else {
                     console.log('ctrl', event['key'])
                 }    
