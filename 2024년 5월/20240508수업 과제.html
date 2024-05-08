@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/2024년 5월/20240508수업 과제 CSS.css">
+</head>
+<body>
+    <h1>가고 싶은 해외여행지(a, s, d, f)</h1>
+
+    <div class="box">
+        <img src="https://www.gotokyo.org/kr/destinations/southern-tokyo/images/499_0354_2.jpg" alt="">
+        <h1 id="location">도쿄</h1>
+    </div>
+
+    <script>
+        img = document.querySelector('img');
+        loca = document.querySelector('#location');
+
+        document.addEventListener('keydown', (e) => {
+            if (e['key'] == 'a') {
+                img.src = 'https://www.gotokyo.org/kr/destinations/southern-tokyo/images/499_0354_2.jpg';
+                loca.innerHTML = '도쿄';
+            } else if (e['key'] == 's') {
+                img.src = 'https://rimage.gnst.jp/livejapan.com/public/article/detail/a/00/00/a0000110/img/basic/a0000110_main.jpg';
+                loca.innerHTML = '아키하바라';
+            } else if (e['key'] == 'd') {
+                img.src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQu_ug1ixKYKap0w2XkJzFyG5fNPZzLeI2GrRGCrC-DcQ&s';
+                loca.innerHTML = '교토';
+            } else if (e['key'] == 'f') {
+                img.src = 'https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcTecdXKx6MGiXlHZuO2IoDGT6WlaWkr01aZqwSSpmHvz1Kpfy1spTasRcyhWBu17lGPULQj4ZlOS0OiINjH_Zk9dHNNHPre2DYF1RC_VA';
+                loca.innerHTML = '오사카';
+            };
+        });
+    </script>
+</body>
+</html>
