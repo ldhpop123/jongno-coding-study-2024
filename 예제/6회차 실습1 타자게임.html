@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6회차 실습1 타자게임 2개</title>
+</head>
+<body>
+    <h1>애국가 타자연습</h1>
+    <p>타이핑을 하여 내용이 일치하면 ok 표시</p>
+    <p>ok 표시를 위한 태그는 span 사용 권장</p>
+    
+    <hr>
+
+    <h2>input 이벤트와 조건문을 활용</h2>
+    <h3>값을 입력하면 맞는지 점검함</h3>
+    <label for="">동해물과 <input type="text" name="" id="song1"> <span id="ok1"></span></label>
+    <br><br>
+    <label for="">백두산이 <input type="text" name="" id="song2"> <span id="ok2"></span></label>
+
+    <h2>키보드 이벤트 활용</h2>
+    <h3>Enter를 누르면 확인함</h3>
+    <label for="">마르고 <input type="text" name="" id="song3"> <span id="ok3"></span></label>
+    <br><br>
+    <label for="">닳도록 <input type="text" name="" id="song4"> <span id="ok4"></span></label>
+
+    <script>
+        let 애국가1 = document.querySelector("#song1")
+        let 오케이1 = document.querySelector("#ok1")
+
+        let 애국가2 = document.querySelector("#song2")
+        let 오케이2 = document.querySelector("#ok2")
+
+        let 애국가3 = document.querySelector("#song3")
+        let 오케이3 = document.querySelector("#ok3")
+
+        let 애국가4 = document.querySelector("#song4")
+        let 오케이4 = document.querySelector("#ok4")
+
+        애국가1.addEventListener("input", () => {
+            if(애국가1.value == "동해물과") 
+                오케이1.innerHTML = "ok"
+            else
+                오케이1.innerHTML = "x"
+        })
+        애국가2.addEventListener("input", () => {
+            if(애국가2.value == "백두산이") 
+                오케이2.innerHTML = "ok"
+            else 
+                오케이2.innerHTML = "x"
+        })
+        애국가3.addEventListener("keyup", (e) => {
+            if(e.key == "Enter") {
+                if(애국가3.value == "마르고")
+                    오케이3.innerHTML = "ok"
+                else 
+                    오케이3.innerHTML = "x"
+            }
+        })
+        애국가4.addEventListener("keyup", (e) => {
+            if(e.key == "Enter") {
+                if(애국가4.value == "닳도록")
+                    오케이4.innerHTML = "ok"
+                else 
+                    오케이4.innerHTML = "x"
+            }
+        })
+    </script>
+</body>
+</html>
