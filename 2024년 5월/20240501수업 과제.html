@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20240501 수업 과제</title>
+    <link rel="stylesheet" href="/2024년 5월/20240501수업 과제CSS.css">
+</head>
+<body>
+    <h1 id="HeadText">BMI 테스트</h1>
+    
+    <label for="tall">키 <input type="text" id="tall"></label>
+    <br><br>
+    <label for="weight">체중 <input type="text" id="weight"></label> 
+    <br><br>
+    <button>계산</button>
+    <hr>
+    <h1>BMI 수치: <span></span></h1>
+    <h1 id="h1"></h1>
+
+
+    <script>
+        let HeadText = document.querySelector('HeadText')
+
+        let tall = document.querySelector('#tall')
+        let weight = document.querySelector('#weight')
+
+        let button = document.querySelector('button')
+
+        let span = document.querySelector('span')
+        let h1 = document.querySelector('#h1')
+
+        button.addEventListener('click', () => {
+            let tallV = tall.value;
+            let weightV = weight.value;
+            tallV /= 100;
+            span.innerHTML = (weightV/(tallV*tallV))
+            
+            if (weightV/(tallV*tallV) <= 18.5 ) {
+                h1.innerHTML = '저체중 입니다.'
+            }
+            else if (18.5 < weightV/(tallV*tallV) < 22.9 ) {
+                h1.innerHTML = '정상범위 입니다.'
+            }
+            else if (23 <= weightV/(tallV*tallV) < 24.9 ) {
+                h1.innerHTML = '위험체중 입니다.'
+            }
+            else {
+                h1.innerHTML = '과체중 입니다.'
+            }
+        });
+    </script>
+</body>
+</html>

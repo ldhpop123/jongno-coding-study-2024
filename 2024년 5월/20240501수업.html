@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 클래스 다루기</title>
+    <link rel="stylesheet" href="/2024년 5월/20240501수업 CSS.css">
+</head>
+<body>
+    <div class="box text">박스, 텍스트 클래스</div>
+    <div id="target">타겟</div>
+
+    <script>
+        // *** DOM 기본원리 ***
+
+        // 1. 대상 지정
+        let 두번째div = document.querySelector('#target')
+        
+        // 2. 지정한 대상을 조작하기
+        두번째div.classList.add('box')
+        두번째div.classList.add('text')
+
+        // *** 태그 내부의 내용 조작하는 태그 ***
+
+        // 1. textContent : 태그 못 넣고 내용만 넣을 수 있음
+        두번째div.textContent += ' 안녕하세요'
+
+        // 2. innerHTML : 태그 넣을 수 있음
+        두번째div.innerHTML += '<h1>안녕하세요!!</h1>'
+
+    </script>
+</body>
+</html>
