@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .parent {
+            background-color: paleturquoise;
+        }
+
+        section {
+            border: 1px solid black;
+        }
+
+        .parent h1 {
+            color: #fff;
+        }
+
+        .parent > h2 {
+            color: brown;
+        }
+
+        /* 가상 클래스 */
+
+        h1:hover { /*hover 띄우다. 마우스를 위에 띄우면 발동*/
+            background-color: magenta;
+        }
+
+        h2:active { /* active: 마우스를 클릭하면 발동*/
+            background-color: aqua;
+        }
+
+        section:active {
+            background-color: aqua;
+        }
+
+        .parent:nth-child(odd) { /*.parent의 n번째 자식인 h1 (even 짝수 odd 홀수) */ 
+            text-decoration: underline;
+            color: black;
+        }
+
+        .parent > h1:nth-of-type(3){ /* n번째에 해당하는 특정 태그 */
+            text-shadow: 3px 4px 5px gray;
+        }
+
+        .parent > h1:nth-of-type(even){ /* n번째에 해당하는 특정 태그 */
+            text-shadow: 3px 4px 5px rgb(98, 155, 155);
+            color: paleturquoise;
+        }
+
+        input:focus {
+            border: 3px solid black;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>내가 원하는 태그를 선택하도록 도와주는 문자</h1>
+    <!-- parent 내부의 h1만 선택하는 방범?? -->
+    <div class="parent">
+        <h1>박스 안 h1</h1>
+        <h2>박스 안 h2</h2>
+        <h2>박스 안 h2</h2>
+        <h1>박스 안 h1</h1>
+        <h1>박스 안 h1</h1>
+        <h1>박스 안 h1</h1>
+        <h1>박스 안 h1</h1>
+        <section>
+            섹션
+            <h1>섹션 안 h1</h1>
+            <h2>섹션 안 h2</h2>
+        </section>
+        <h2>박스 안 h2</h2>
+    </div>
+
+    <input style="width: 300px; height: 100px;" type="text">
+</body>
+</html>
