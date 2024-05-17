@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상요소</title>
+
+    <style>
+        p::before{
+            content: 'best';
+            background-color: deeppink;
+            color: #fff;
+            padding: 3px; margin-right: 5px;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        #soldOut::after{
+            content: 'sold out';
+            background-color: blue;
+            color: #fff;
+            padding: 3px; margin-left: 5px;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        p::selection{
+            background-color: gray;
+            color: #fff;
+        }
+
+        p::first-letter{ /* 첫번째 글자 */
+            color: #0f0;
+        }
+
+        p::first-line{ /* 첫번째 글자 */
+            text-decoration: underline;
+        }
+    </style>
+
+</head>
+<body>
+
+    <h1>가상요소</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos amet explicabo voluptatibus, maiores facere asperiores minus maxime eveniet fugiat corrupti tempora deserunt consequuntur possimus molestiae laudantium. Reprehenderit exercitationem explicabo eius molestiae aliquid accusantium quos nobis repellendus. Molestiae, alias corporis esse quam deleniti, itaque praesentium magnam nisi, non blanditiis illo harum et culpa laudantium consequuntur cum illum. Saepe dolor asperiores numquam, aliquid exercitationem est! Ex quam corrupti sunt quibusdam porro molestias perferendis delectus assumenda, et beatae. Voluptate unde alias ex nihil, possimus explicabo laboriosam? Expedita eum iusto nemo? Deleniti repellendus corrupti perspiciatis voluptates voluptate obcaecati a nemo, maxime cum ea dolorum.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p id="soldOut">Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+}
+
+.box {
+    width: 20%; height: 300px;
+    flex: 1; order: 1;
+    background-color: tomato;
+    border: 3px solid black;
+}
+
+.box1 {
+    width: 60%; height: 200px; flex: 10;
+    background-color: tomato;
+    border: 3px solid black;
+}
+
+#wrap {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}

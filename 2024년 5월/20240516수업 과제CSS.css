@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: #eae8e8;
+}
+
+header > ol {
+    list-style: none;
+}
+
+header li {
+    display: inline-block;
+    border: 2px solid #c1bfbf;
+    border-radius: 15px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+header li:hover{
+    background-color: #c1bfbf;
+    color: #fff;
+}
+
+header {
+    width: 1200px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 30px;
+    text-align: center;
+    padding: 20px;
+}
+
+header > h1 {
+    margin-bottom: 10px;
+}
+
+header > p {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.section1 {
+    width: 1200px;
+    height: 400px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 30px;
+    text-align: center;
+    padding: 10px;
+}
+
+.section1 > p {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.section1 > .box {
+    width: 570px;
+    height: 340px;
+    background-color: #eae8e8;
+    border-radius: 25px;
+    margin: 0 15px;
+    text-align: left;
+    float: left;
+}
+
+.section1 > .box > p {
+    margin: 15px 0 0 15px;
+    font-weight: bold;
+}
+
+.section1 > .box > h1 {
+    margin-left: 20px;
+}
+
+.section1 > .box > ul {
+    margin: 5px 0px 0 30px;
+}
+
+.section1 > .box  li {
+    margin-bottom: 10px;
+}
+
+#hot::before{
+    content: 'hot';
+    background-color: red;
+    color: #fff;
+    border-radius: 3px;
+    text-align: center;
+    margin-right: 5px;
+    padding: 2px;
+}
+
+#new::before{
+    content: 'new';
+    background-color: blue;
+    color: #fff;
+    border-radius: 3px;
+    text-align: center;
+    margin-right: 5px;
+    padding: 2px;
+}
+
+#heart::before{
+    content: '🤍';
+    background-color: deeppink;
+    color: #fff;
+    border-radius: 3px;
+    text-align: center;
+    margin-right: 5px;
+    padding: 2px;
+}
+
+.section1 > .box > table {
+    margin: 0 15px;
+    text-align: left;
+}
+
+.section1 table, tr, td{
+    border: 1px solid #c1bfbf;
+    border-collapse: collapse;
+}
+
+.section1 td{
+    padding: 8px;
+}
+
+.section1 tr:nth-of-type(odd) {
+    background-color: rgba(255, 255, 0, 0.121);
+}
+
+.section2 {
+    width: 1200px;
+    height: 400px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 30px;
+    text-align: center;
+    padding: 10px;
+}
+
+.section2 > p {
+    font-weight: bold;
+}
+
+.section2 > .box {
+    width: 350px;
+    margin-top: 20px;
+    display: inline-block;
+    text-align: left;
+}
+
+.section2 img {
+    width: 350px;
+}

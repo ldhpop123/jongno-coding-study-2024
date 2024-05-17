@@ -1,0 +1,66 @@
+* {
+    margin: 0; padding:0;
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%; height: 80px;
+    background: linear-gradient(45deg, Violet, Orange) ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header > h1 {
+    color: #fff;
+    margin: 15px;
+}
+
+header > label{
+    margin: 15px;
+    color: deeppink;
+}
+
+header > label > input {
+    height: 25px;
+    border: none;
+    border-radius: 3px;
+}
+
+.ToDo_list {
+    width: 100%; height: 55px;
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    align-items: center;
+}
+
+.ToDo_list > .heartBox {
+    flex: 2; 
+    margin: 15px;
+}
+
+.heartBox > .heart{
+    color: #ec407a;
+    cursor: pointer;
+}
+
+.ToDo_list > label {
+    flex: 6; 
+}
+
+.ToDo_list > .tool {
+    flex: 2;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.tool > .check {
+    color: #80cbc4;
+    cursor: pointer;
+}
+
+.tool > .clear {
+    color: #ff5252;
+    cursor: pointer;
+}
+

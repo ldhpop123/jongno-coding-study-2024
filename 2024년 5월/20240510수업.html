@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // 마우스이벤트 : 대상이 있음
+        // 키보드이벤트 : 대상이 페이지
+
+        document.addEventListener('keydown', (e) => { // 키를 누르는것 keydown keypress 키를 때는 것 keyup
+            console.log('keydown 이벤트 발생')
+        });
+
+        document.addEventListener('keyup', (e) => { // 키를 누르는것 keydown keypress 키를 때는 것 keyup
+            console.log('keyup 이벤트 발생')
+        });
+
+    </script>
+
+</body>
+</html>

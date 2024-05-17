@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo_list</title>
+    <link rel="stylesheet" href="/2024년 5월/todo_list_CSS.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Todo</h1>
+        <label for=""><input type="text"></label>
+    </header>
+    
+    <section>
+        <div class="ToDo_list">
+            <div class="heartBox">
+                <i class="material-icons heart">favorite_border</i>
+            </div>
+            
+
+
+            <label for="">ddd</label>
+            <div class="tool">
+                <i class="material-icons check">check</i>
+                <i class="material-icons clear">clear</i>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        let heart = document.querySelector('.heart');
+        let input = document.querySelector('input');
+        let check = document.querySelector('.check');
+        let clear = document.querySelector('.clear');
+        
+        let toDo_list = document.querySelector('.Todo_list');
+        
+        let section = document.querySelector('section');
+
+        document.addEventListener('keydown', (e) => {
+            if (e['key'] == 'Enter') {
+                if (input['value'] != '') {
+                    console.log(input['value']);
+                    input['value'] = '';
+                    section.appendChild(document.createElement('div')).classList = 'ToDo_list'
+                    
+                }
+            }
+        });
+
+        heart.addEventListener('click', () => {
+            if (heart.innerText == 'favorite') {
+                heart.textContent = 'favorite_border'
+            } else {
+                heart.textContent = 'favorite'
+            }
+        });
+
+        check.addEventListener('click', () => {
+            check.clo
+        });
+        
+        clear.addEventListener('click', () => {
+            console.log(clear)
+        });
+    </script>
+</body>
+</html>

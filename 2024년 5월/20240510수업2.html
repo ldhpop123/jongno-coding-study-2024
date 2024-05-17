@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        
+        let 황준섭 = {
+            이름: '황준섭',
+            키: 180,
+            체중: 70,
+            학교: '염광고',
+            월급: 1000000
+        }
+
+        let 김형준 = {
+            이름: '김형준',
+            키: 171,
+            체중: '청량고',
+            몸무게: '몰라요',
+            월급: 0
+        }
+
+        let 김유찬 = {
+            '이름': '김유찬',
+            '키': 165,
+            '학교': '신현고',
+            '몸무게': 50,
+            '월급': 0
+        }
+
+        console.log(황준섭['월급'])
+
+        console.log(황준섭)
+        console.log(김형준)
+        console.log(김유찬)
+
+        let 황준섭JSON = JSON.stringify(황준섭)
+        console.log(황준섭JSON)
+
+        let 황준섭JSON_parse = JSON.parse(황준섭JSON)
+        console.log(황준섭JSON_parse)
+        
+        // json
+    </script>
+</body>
+</html>
