@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            width: 100%;
+            display: flex; 
+            justify-content: space-around;
+        }
+
+        .box {
+            width: 200px; height: 200px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    
+    <h2>float 로 박스를 좌우로 나열 -> float 적용한 놈 밑에 있는 다른 개체들도 영향을 받음 -> clear를 써야함</h2>
+    <h2>display: inline-block 으로 박스를 좌우로 나열 -> 글씨로 취급되므로, 글씨 간의 여백이 자동으로 생김</h2>
+
+    <div class="parent">
+        <div class="box" style="height: 300px; order: 2; flex: 1;">1</div>
+        <div class="box" style="order: 3; flex: 1;">2</div>
+        <div class="box" style="height: 100px; order: 1; flex: 2;">3</div>
+    </div>
+</body>
+</html>

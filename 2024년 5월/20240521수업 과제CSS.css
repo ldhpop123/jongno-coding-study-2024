@@ -1,0 +1,139 @@
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    height: 80px;
+
+    background-color: #fff;
+    box-shadow: 0 3px 0 0 #d6d4d49b;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header > ul {
+    list-style: none;
+    display: flex;
+}
+
+header > ul > li {
+    margin: 20px;
+    padding: 20px;
+
+    color:rgba(84, 77, 220, 0.895);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+header > ul > li:hover {
+    border-radius: 15px;
+    background-color: #ddd;
+}
+
+header > ul > li:active {
+    border-radius: 15px;
+    background-color: #ddd;
+}
+
+header > h1 {
+    margin: 20px;
+
+    color: rgba(84, 77, 220, 0.895);
+}
+
+header > div {
+    display: flex;
+}
+
+header > div > p {
+    margin: 10px;
+    padding: 20px;
+    font: 16pt;
+    font-weight: bold;
+    color:  rgba(84, 77, 220, 0.895);
+}
+
+header > div > p:hover {
+    border-radius: 15px;
+    background-color: #ddd;
+}
+
+header > div > p:active {
+    border-radius: 15px;
+    background-color: #ddd;
+}
+
+html {
+    background-color: #e1dddda5;
+}
+
+section {
+    width: 100%;
+    display:  flex;
+    justify-content: space-between;
+    padding: 35px 50px;
+}
+
+section > .left {
+    flex: 3;
+}
+
+section > .left > ul {
+    list-style: none;
+    padding-right: 30px;
+}
+
+section > .left > ul > li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+section > .left > ul > li:hover{
+    border-radius: 20px;
+    background-color: #ddd;
+}
+
+section > .left > ul > li:active {
+    border-radius: 20px;
+    background-color: #ddd;
+}
+
+section > .center {
+    flex: 5;
+}
+
+section > .center > .box {
+    width: 100%;
+    background-color: #fff;
+    padding: 25px;
+    box-shadow: 0 3px 0 0 #d6d4d49b;
+
+    margin-bottom: 35px;
+
+    cursor: pointer;
+}
+
+section > .center > .box > img {
+    width: 100%;
+}
+
+section > .guide {
+    flex:  3;
+}
+
+
+section > .guide > div {
+    margin:0 0 0 200px;
+}
+
+section > .guide > div > h1, p, img {
+    padding: 5px;
+}
+
+section > .guide > div > img {
+    width: 100%;
+}
