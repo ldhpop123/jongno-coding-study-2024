@@ -14,24 +14,13 @@
     </header>
     
     <section>
-        <div class="ToDo_list">
-            <div class="heartBox">
-                <i class="material-icons heart">favorite_border</i>
-            </div>
-            
 
-
-            <label for="">ddd</label>
-            <div class="tool">
-                <i class="material-icons check">check</i>
-                <i class="material-icons clear">clear</i>
-            </div>
-        </div>
     </section>
 
     <script>
-        let heart = document.querySelector('.heart');
         let input = document.querySelector('input');
+
+        let heart = document.querySelector('.heart');
         let check = document.querySelector('.check');
         let clear = document.querySelector('.clear');
         
@@ -39,31 +28,43 @@
         
         let section = document.querySelector('section');
 
-        document.addEventListener('keydown', (e) => {
+        input.addEventListener('keydown', (e) => {
             if (e['key'] == 'Enter') {
                 if (input['value'] != '') {
                     console.log(input['value']);
-                    input['value'] = '';
                     section.appendChild(document.createElement('div')).classList = 'ToDo_list'
+                    
+                    section.lastChild.appendChild(document.createElement('div')).classList = 'heartBox'
+                    section.lastChild.lastChild.appendChild(document.createElement('i')).classList = 'material-icons heart'
+                    section.lastChild.lastChild.lastChild.innerText = 'favorite_border'
+                    
+                    section.lastChild.appendChild(document.createElement('label'))
+                    section.lastChild.lastChild.innerText = `${input['value']}`
+
+                    section.lastChild.appendChild(document.createElement('div')).classList = 'tool'
+                    
+                    section.lastChild.lastChild.appendChild(document.createElement('i')).classList = 'material-icons check'
+                    section.lastChild.lastChild.lastChild.innerText = 'check'
+
+                    section.lastChild.lastChild.appendChild(document.createElement('i')).classList = 'material-icons clear'
+                    section.lastChild.lastChild.lastChild.innerText = 'clear'
+                    input['value'] = '';
                     
                 }
             }
         });
 
-        heart.addEventListener('click', () => {
-            if (heart.innerText == 'favorite') {
-                heart.textContent = 'favorite_border'
-            } else {
-                heart.textContent = 'favorite'
+        document.addEventListener('click', (e) => {
+            console.log(e['target'].innerText)
+            if ((e['target'].innerText) == 'favorite_border') {
+                e['target'].innerText = 'favorite'
+            }else if ((e['target'].innerText) == 'favorite') {
+                e['target'].innerText = 'favorite_border'
             }
-        });
 
-        check.addEventListener('click', () => {
-            check.clo
-        });
-        
-        clear.addEventListener('click', () => {
-            console.log(clear)
+            if ((e['target'].innerText) == 'check' || (e['target'].innerText) == 'clear') {
+                section.removeChild(e['target'].parentNode.parentNode)
+            }
         });
     </script>
 </body>
