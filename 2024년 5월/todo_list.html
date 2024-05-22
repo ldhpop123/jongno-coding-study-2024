@@ -20,7 +20,15 @@
     <script>
         let input = document.querySelector('input');
 
-        let heart = document.querySelector('.heart');
+        let Todo_list = document.querySelector('ToDo_list');
+
+        let heart = document.createElement('div').classList.add('heartBox')
+        heart.appendChild(document.createElement('i'));
+        heart.lastChild.classList.add('material-icons');
+        heart.lastChild.classList.add('heart');
+        heart.lastChild.textContent = 'favorite_border';
+        
+
         let check = document.querySelector('.check');
         let clear = document.querySelector('.clear');
         
@@ -28,16 +36,15 @@
         
         let section = document.querySelector('section');
 
+
+
         input.addEventListener('keydown', (e) => {
             if (e['key'] == 'Enter') {
                 if (input['value'] != '') {
                     console.log(input['value']);
                     section.appendChild(document.createElement('div')).classList = 'ToDo_list'
-                    
-                    section.lastChild.appendChild(document.createElement('div')).classList = 'heartBox'
-                    section.lastChild.lastChild.appendChild(document.createElement('i')).classList = 'material-icons heart'
-                    section.lastChild.lastChild.lastChild.innerText = 'favorite_border'
-                    
+                    section.lastChild.appendChild('heart')
+
                     section.lastChild.appendChild(document.createElement('label'))
                     section.lastChild.lastChild.innerText = `${input['value']}`
 
@@ -65,6 +72,14 @@
             if ((e['target'].innerText) == 'check' || (e['target'].innerText) == 'clear') {
                 section.removeChild(e['target'].parentNode.parentNode)
             }
+        });
+
+        check.addEventListener('click', (e) => {
+            console.log(e)
+        });
+        
+        clear.addEventListener('click', () => {
+            console.log(clear)
         });
     </script>
 </body>
