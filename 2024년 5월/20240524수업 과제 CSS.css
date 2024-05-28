@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    position: fixed;
+    z-index: 2;
+    width: 300px;
+    height: 100%;
+    padding: 10px;
+    border-right: 1px solid #ddd;
+}
+
+aside  img {
+    width: 180px;
+}
+
+aside > div {
+    flex: 1;
+}
+
+aside > ul {
+    list-style: none;
+    flex: 7;
+}
+
+aside > ol {
+    list-style: none;
+    margin-top: -70px;
+}
+
+aside  li {
+    display: flex;
+    padding: 10px;
+}
+
+aside li:hover {
+    background-color: #ddd;
+    border-radius: 10px;
+}
+
+aside  li > i {
+    margin: 0 10px;
+}
+
+header {
+    background-color: #fff;
+    display: flex;
+    position: fixed;
+    left: 300px;
+    z-index: 2;
+    width: calc(100% - 300px);
+    height: 60px;
+    border-bottom: 1px solid #ddd ;
+    justify-content: center;
+    align-items: center;
+}
+
+header > i {
+    color: #636262;
+}
+
+header > input {
+    width: 300px;
+    height: 30px;
+    margin: 15px 0;
+    color: #ddd;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+section {
+    position: relative;
+    left: 300px;
+    top: 60px;
+    display: flex;
+}
+
+section > .main {
+    flex: 3;
+}
+
+section > .main > .box {
+    width: 60%;
+    margin: 20px auto;
+    border-bottom: 1px solid #ddd;
+}
+
+section > .main > .box > img {
+    width: 100%;
+}
+
+section > .main > .box > .tool > i{
+    margin-right: 10px;
+}
+
+section > .side {
+    flex: 2;
+}
+
+section > .side > .box {
+    margin-top: 20px;
+}
+
+section > .side > .box > ul {
+    list-style: none;
+}
+
+section > .side > .box li {
+    display: flex;
+    margin: 10px;
+    align-items: center;
+}
+section > .side > .box img {
+    width: 70px;
+}
+
+
