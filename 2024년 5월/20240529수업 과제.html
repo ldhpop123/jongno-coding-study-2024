@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>타자 게임</title>
+</head>
+<body>
+    <h1>애국가 타자 연습</h1>
+    <p>타이핑을 하영 내용이 일치하면 ok 표시</p>
+    <p>ok 표시를 위한 태그는 span 사용 권장</p>
+    <hr>
+    <h2>input 이벤트와 조건문을 활용</h2>
+    <h3>값을 입력하면 맞는지 점검함</h3>
+    <label for="text1">동해물과 <input id="text1" type="text"><span></span> </label>
+    <br><br>
+    <label for="text2">백두산이 <input id="text2" type="text"><span></span> </label>
+    <h2>키보드 이벤트 활용</h2>
+    <h3>Enter를 누르면 확인함</h3>
+    <label for="text3">마르고 <input id="text3" type="text"><span></span> </label>
+    <br><br>
+    <label for="text4">닳도록 <input id="text4" type="text"><span></span> </label>
+
+    <script>
+        let text1 = document.querySelector('#text1');
+        let text2 = document.querySelector('#text2');
+        let text3 = document.querySelector('#text3');
+        let text4 = document.querySelector('#text4');
+
+        text1.addEventListener('input', (e) => {
+            if (e.target.value == '동해물과') {
+                text1.nextSibling.textContent = ' ok'
+            } else {
+                text1.nextSibling.textContent = ' x'
+            }
+        });
+
+        text2.addEventListener('input', (e) => {
+            if (e.target.value == '백두산이') {
+                text2.nextSibling.textContent = ' ok'
+            } else {
+                text2.nextSibling.textContent = ' x'
+            }
+        });
+
+        
+        document.addEventListener('keypress', (e) => {
+            if (e.key == 'Enter') {
+                if (text3.value == '마르고') {
+                    text3.nextSibling.textContent = ' ok'
+                } else if (text3.value == '') {
+                    text3.nextSibling.textContent = ''
+                } else  {
+                    text3.nextSibling.textContent = ' x'
+                }
+                if (text4.value == '닳도록') {
+                    text4.nextSibling.textContent = ' ok'
+                } else if (text4.value == '') {
+                    text4.nextSibling.textContent = ''
+                } else {
+                    text4.nextSibling.textContent = ' x'
+                }
+            }
+        });
+    </script>
+</body>
+</html>

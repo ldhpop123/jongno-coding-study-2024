@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>단위 변환</h1>
+    <p>cm을 선택한 단위로 변환합니다.</p>
+    <label for=""><input type="text" id="input"> cm</label>
+    <br>
+    <p>--------- 결과 ---------</p>
+    <label for=""><input type="text" id="result" readonly>
+        <select name="" id="select">
+            <option value="inch">inch</option>
+            <option value="mm">mm</option>
+            <option value="m">m</option>
+        </select>
+    </label>
+
+    <script>
+        const input = document.querySelector('#input')
+        const result = document.querySelector('#result')
+        const select = document.querySelector('#select')
+
+        select.addEventListener('change', (e) => {
+            console.log(input.value)
+            if (input.value != '') {
+                if (select.value == 'inch') {
+                    result.value  = (input.value)/2.54
+                } else if (select.value == 'mm') {
+                    result.value = (input.value)*10
+                } else if (select.value == 'm') {
+                    result.value = (input.value)/100
+                }
+            } else {
+                result.value = '입력값이 없습니다.'
+            }
+        });
+    </script>
+</body>
+</html>

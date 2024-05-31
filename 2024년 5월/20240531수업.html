@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div {
+            width: 500px; height: 150px;
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>이벤트가 발생한 객체에 대해</h1>
+    </div>
+
+    <script>
+        const h1 = document.querySelector('h1');
+        const div = document.querySelector('div');
+
+        h1.addEventListener('click', (e) => {
+            console.log('h1태그 클릭')
+            console.log(e.target)
+            console.log(e.currentTarget)
+            console.log(e)
+            console.log(this)
+            더하기(1,2)
+        })
+
+        function 더하기(x, y) {
+            console.log(x+y)
+            console.log(this)
+        }
+
+    </script>
+</body>
+</html>
