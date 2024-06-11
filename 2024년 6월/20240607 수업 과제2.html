@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0; padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            width:100%; height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        header > h1 {
+            margin: 20px;
+        }
+
+        header > p {
+            font-weight: bold;
+        }
+        
+        table{
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+        
+        thead {
+            background-color: cadetblue;
+        }
+
+        thead td { 
+            padding: 0 30px;
+        }
+
+        tbody {
+            background-color: beige;
+        }
+
+        tbody td {
+            text-align: center;
+            padding: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>로또 당첨 번호</h1>
+        <p>1~45의 숫자 범위 6개 뽑기</p>
+        <p>중복된 숫자는 입력되지 않음</p>
+    </header>
+
+    <section>
+        <table>
+            <thead>
+                <td>1번</td>
+                <td>2번</td>
+                <td>3번</td>
+                <td>4번</td>
+                <td>5번</td>
+                <td>6번</td>
+            </thead>
+            <tbody>
+                <td id="result1"></td>
+                <td id="result2"></td>
+                <td id="result3"></td>
+                <td id="result4"></td>
+                <td id="result5"></td>
+                <td id="result6"></td>
+            </tbody>
+        </table>
+    </section>
+
+    <script>
+        const result1 = document.querySelector('#result1');
+        const result2 = document.querySelector('#result2');
+        const result3 = document.querySelector('#result3');
+        const result4 = document.querySelector('#result4');
+        const result5 = document.querySelector('#result5');
+        const result6 = document.querySelector('#result6');
+
+        let num_li = [];
+        let i = 0;
+
+        while (i < 6) {
+            let random_num = Math.floor(Math.random()*(45)) + 1;
+            if (num_li.indexOf(random_num) == -1) {
+                num_li.push(random_num);
+                console.log(random_num)
+                i += 1
+            }
+        }
+
+        result1.textContent = (num_li[0])
+        result2.textContent = (num_li[1])
+        result3.textContent = (num_li[2])
+        result4.textContent = (num_li[3])
+        result5.textContent = (num_li[4])
+        result6.textContent = (num_li[5])
+        
+    </script>
+</body>
+</html>
