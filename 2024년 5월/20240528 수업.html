@@ -10,18 +10,19 @@
             display: grid;
             /* grid-template-columns: repeat(auto-fill, minmax(200px, 200px)) ; */
             grid-template-columns: repeat(3, 300px);
-            grid-template-rows: repeat(3, 300px);
+            grid-template-rows: repeat(2, 300px);
             gap: 30px;
             align-items: center;
             justify-items: center;
-
         }
         .item {
-            width: 100px; height: 100px;
+            display: inline-block;
+            /* width: 100px; height: 100px; */
             background-color: skyblue;
             border: 1px solid #999;
             border-radius: 20px;
         }
+        
     </style>
 </head>
 <body>
@@ -32,15 +33,13 @@
 
 
     <div class="container">
-        <div class="item" style="justify-self: end;"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
+        <div class="item" style="grid-column: 1 / 2; grid-column: 1 / span 2;">1</div>
         <div class="item"></div>
         <div class="item"></div>
         <div class="item"></div>
         <div class="item"></div>
         <div class="item"></div>
     </div>
+
 </body>
 </html>

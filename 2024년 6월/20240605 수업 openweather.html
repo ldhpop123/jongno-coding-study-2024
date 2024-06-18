@@ -92,7 +92,7 @@
         <label for=""><img src="" alt="img"></label>
         <div class="box">
             <p>체감  <span id="feels_like">feels</span> °C</p>
-            <p>초속  <span id="wind">wind</span>  m/s</p>
+            <p>풍속  <span id="wind">wind</span>  m/s</p>
         </div>
     </section>
 
@@ -108,7 +108,6 @@
         const feels_like = document.querySelector('#feels_like')
         const humidity = document.querySelector('#humidity')
 
-
         select.addEventListener('change', (e) => {
             axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${e.target.value}&appid=${apiKey}`)
             .then(function (response) {
@@ -119,7 +118,6 @@
                 temp.textContent = (response.data.main.temp-273).toFixed(1)
                 wind.textContent = response.data.wind.speed
                 feels_like.textContent = (response.data.main.feels_like-273).toFixed(1)
-
             });
         });
 

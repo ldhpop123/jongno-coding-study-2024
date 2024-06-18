@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/2024년 6월/20240613 공개 수업CSS.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <script>
+        const api_Key = 'e12b8f780a6be124be04a9b77b2383bb'
+
+        axios.get(`https://api.openweathermap.org/data/2.5/weather?q=Seoul&appid=${api_Key}`)
+        .then(function (response) {
+            console.log(response)
+            document.write('기온: ')
+            document.write((response.data.main.temp-273.15).toFixed(2)) 
+            document.write('<br>체감온도: ')
+            document.write((response.data.main.feels_like-273.15).toFixed(2))
+            document.write('<br>풍속: ')
+            document.write(response.data.wind.speed)
+            document.write('<br>습도: ')
+            document.write(response.data.main.humidity)
+        })
+    </script>
+</body>
+</html>
