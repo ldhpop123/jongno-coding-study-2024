@@ -23,7 +23,7 @@
             
             <div class="detail_temp">
                 <p class="temp_box">temp <span id="temp_text"></span>°C</p>
-                <P class="feels_temp_box">feels_temp <span id="feels_text"></span>°C</P>
+                <P class="feels_temp_box">feels_like <span id="feels_text"></span>°C</P>
                 <p class="max_temp_box">max_temp <span id="max_temp_text"></span>°C</p>
                 <p class="min_temp_box">min_temp <span id="min_temp_text"></span>°C</p>
                 <p class="pressure_box">pressure <span id="pressure_text"></span>hPa</p>
@@ -36,7 +36,7 @@
             </div>
 
             <div class="sun">
-                <p class="sunrise_box">sunraise <span id="sunraise_text"></span></p>
+                <p class="sunrise_box">sunrise <span id="sunraise_text"></span></p>
                 <p class="sunset_box">sunset <span id="sunset_text"></span></p>
             </div>
         </div>
@@ -44,21 +44,21 @@
 
     <main>
         <section>
-            <img id="main_city_img" src="https://media.istockphoto.com/id/464629385/ko/%EC%82%AC%EC%A7%84/%ED%95%9C%EA%B5%AD%EC%8B%9C%EA%B0%81-%EC%8A%A4%EC%B9%B4%EC%9D%B4%EB%9D%BC%EC%9D%B8.jpg?s=612x612&w=0&k=20&c=eprV6Drv7mckHkuDasa0F5sdY2WeL8TI6O532ERDpGI=" alt="">
+            <img id="main_city_img" src="https://media.cntraveller.com/photos/6343df288d5d266e2e66f082/16:9/w_2560%2Cc_limit/tokyoGettyImages-1031467664.jpeg">
             
             <div class="info_box">
                 <div class="info">
                     <div class="city_box">
-                        <p id="city_text">London</p>
+                        <p id="city_text"></p>
                         <img id="weatherImg" src="http://openweathermap.org/img/wn/04n@2x.png" alt="">
                     </div>
 
                     <div class="temp_box">
-                        <p><span id="main_temp_text">14.4</span>°C</p>
+                        <p><span id="main_temp_text"></span>°C</p>
                     </div>
 
                     <div class="feelsANDwind">
-                        <p id="feels">Feels_temp <span id="main_feels_text"></span>°C</p>
+                        <p id="feels">Feels_like <span id="main_feels_text"></span>°C</p>
                         <p id="wind">Wind <span id="main_wind_speed_text"></span>m/s</p>
                     </div>
                 </div>
@@ -66,61 +66,66 @@
         </section>
 
         <nav>
-            <div class="item">
-                <img src="https://media.istockphoto.com/id/464629385/ko/%EC%82%AC%EC%A7%84/%ED%95%9C%EA%B5%AD%EC%8B%9C%EA%B0%81-%EC%8A%A4%EC%B9%B4%EC%9D%B4%EB%9D%BC%EC%9D%B8.jpg?s=612x612&w=0&k=20&c=eprV6Drv7mckHkuDasa0F5sdY2WeL8TI6O532ERDpGI=" alt="seoul">
-                <p>Seoul</p>
+            <div class="input">
+                <input type="text">
             </div>
 
-            <div class="item">
-                <img src="https://www.opinionnews.co.kr/news/photo/201905/18042_13312_1145.jpg">
-                <p>Busan</p>
-            </div>
+            <div class="container">
+                <div class="item">
+                    <img src="https://img.freepik.com/free-photo/downtown-cityscape-night-seoul-south-korea_335224-272.jpg?t=st=1718737390~exp=1718740990~hmac=7bcd5f30345b15afbdd7800dd46f0178d3dd9d0143d3645c19e5105981dfe83a&w=2000" alt="seoul">
+                    <p>Seoul</p>
+                </div>
 
-            <div class="item">
-                <img src="https://media.cntraveller.com/photos/6343df288d5d266e2e66f082/16:9/w_2560%2Cc_limit/tokyoGettyImages-1031467664.jpeg" alt="">
-                <p>Tokyo</p>
-            </div>
+                <div class="item">
+                    <img src="https://i.ytimg.com/vi/HL84zKbQDaM/maxresdefault.jpg">
+                    <p>Busan</p>
+                </div>
 
-            <div class="item">
-                <img src="https://www.nippon.com/en/ncommon/contents/guide-to-japan/2339170/2339170.jpg" alt="">
-                <p>Osaka</p>
-            </div>
+                <div class="item">
+                    <img src="https://media.cntraveller.com/photos/6343df288d5d266e2e66f082/16:9/w_2560%2Cc_limit/tokyoGettyImages-1031467664.jpeg" alt="">
+                    <p>Tokyo</p>
+                </div>
 
-            <div class="item">
-                <img src="https://i.namu.wiki/i/mhrfwdvG183XHW_hF7maCS8UR3SeX8PZ8kpNBzbFhGEKrq9KrrF8Ehi1S3E-UeZh8ow23miBm9-jDC-3uOf4Og.webp" alt="">
-                <p>New York</p>
-            </div>
+                <div class="item">
+                    <img src="https://www.nippon.com/en/ncommon/contents/guide-to-japan/2339170/2339170.jpg" alt="">
+                    <p>Osaka</p>
+                </div>
 
-            <div class="item">
-                <img src="https://assets.entrepreneur.com/content/3x2/2000/20150309170709-shutterstock-139999093.jpeg?format=pjeg&auto=webp&crop=16:9" alt="">
-                <p>London</p>
-            </div>
+                <div class="item">
+                    <img src="https://i.namu.wiki/i/mhrfwdvG183XHW_hF7maCS8UR3SeX8PZ8kpNBzbFhGEKrq9KrrF8Ehi1S3E-UeZh8ow23miBm9-jDC-3uOf4Og.webp" alt="">
+                    <p>New York</p>
+                </div>
 
-            <div class="item">
-                <img src="https://tourimage.interpark.com/BBS/Tour/FckUpload/201701/6361922355950863130.jpg" alt="">
-                <p>Paris</p>
-            </div>
-            
-            <div class="item">
-                <img src="https://i.namu.wiki/i/FSR4n3YCckQir4wvbDkbDrUj6i_P3_5tA9ct53KCPGyWqf_0CDd4J1IWg5G94rV_6j9niudW4hO_b3ck46PiLg.webp" alt="">
-                <p>Madrid</p>
-            </div>
+                <div class="item">
+                    <img src="https://assets.entrepreneur.com/content/3x2/2000/20150309170709-shutterstock-139999093.jpeg?format=pjeg&auto=webp&crop=16:9" alt="">
+                    <p>London</p>
+                </div>
 
-            <div class="item">
-                <img src="https://static.barcelo.com/content/dam/bpt/posts/2021/9/stopover-in-dubai_layover-in-dubai-1.jpg" alt="">
-                <p>Dubai</p>
-            </div>
+                <div class="item">
+                    <img src="https://cdn.pixabay.com/video/2024/03/08/203402-921381906_tiny.jpg" alt="">
+                    <p>Paris</p>
+                </div>
+                
+                <div class="item">
+                    <img src="https://i.namu.wiki/i/FSR4n3YCckQir4wvbDkbDrUj6i_P3_5tA9ct53KCPGyWqf_0CDd4J1IWg5G94rV_6j9niudW4hO_b3ck46PiLg.webp" alt="">
+                    <p>Madrid</p>
+                </div>
 
-            <div class="item">
-                <img src="https://cdn.getyourguide.com/img/tour/33cca66c19886c9f.jpeg/146.jpg" alt="">
-                <p>Rome</p>
-            </div>
+                <div class="item">
+                    <img src="https://static.barcelo.com/content/dam/bpt/posts/2021/9/stopover-in-dubai_layover-in-dubai-1.jpg" alt="">
+                    <p>Dubai</p>
+                </div>
 
-            <div class="item">
-                <img src="https://watermark.lovepik.com/photo/20211207/large/lovepik-european-famous-tourist-city-barcelona-spain-picture_501550770.jpg" alt="">
-                <p>Barcelona</p>
-            </div>
+                <div class="item">
+                    <img src="https://i.pinimg.com/originals/b9/83/6b/b9836b8d84be73dac0dcf4f0a0f11c3e.png" alt="">
+                    <p>Rome</p>
+                </div>
 
+                <div class="item">
+                    <img src="https://watermark.lovepik.com/photo/20211207/large/lovepik-european-famous-tourist-city-barcelona-spain-picture_501550770.jpg" alt="">
+                    <p>Barcelona</p>
+                </div>
+            </div>
         </nav>
     </main>
 
@@ -128,7 +133,10 @@
         const api_key = 'e12b8f780a6be124be04a9b77b2383bb'
 
         let nav = document.querySelector('nav')
+        let input = document.querySelector('input')
+        let info_box = document.querySelector('.info_box')
 
+        let flag = document.querySelector('#flag')
         let country_text = document.querySelector('#country_text');
         let lon_text = document.querySelector('#lon_text');
         let lat_text = document.querySelector('#lat_text');
@@ -155,11 +163,24 @@
         let weatherImg = document.querySelector('#weatherImg')
         let main_city_img = document.querySelector('#main_city_img')
 
-        axios.get(`https://api.openweathermap.org/data/2.5/weather?q=Seoul&appid=${api_key}`)
+        let feels = document.querySelector('#feels');
+        let wind = document.querySelector('#wind');
+
+        axios.get(`https://api.openweathermap.org/data/2.5/weather?q=Tokyo&appid=${api_key}`)
                 .then(function (response) {
                     console.log(response.data.sys.country)
+                    axios.get(`http://apis.data.go.kr/1262000/CountryFlagService2/getCountryFlagList2?serviceKey=1oqS8oZ%2BbCZjfuUwgC2PZ30Y7loXN9ZI%2Ff2aS2LyF0ZTh6jsCf7yzUmdWfq2ADrwi%2BZo87BqmOfPpJ9subOLfw%3D%3D&returnType=JSON&cond[country_iso_alp2::EQ]=${response.data.sys.country}`)
+                    .then(function (response2) {
+                        country_text.textContent = response2.data.data[0].country_nm
+                        flag.src = response2.data.data[0].download_url
+                        console.log(response2.data.data)
+                    })
                     lon_text.textContent = response.data.coord.lon
                     lat_text.textContent = response.data.coord.lat
+
+                    info_box.style.backgroundColor = 'rgba(40, 38, 38, 0.418)'
+                    feels.style.backgroundColor = '#181818b9'
+                    wind.style.backgroundColor = '#181818b9'
 
                     city_text.textContent = response.data.name
                     weatherImg.src = `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
@@ -186,10 +207,62 @@
                 axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${e.target.innerText}&appid=${api_key}`)
                 .then(function (response) {
                     console.log(response.data.sys.country)
+                    axios.get(`http://apis.data.go.kr/1262000/CountryFlagService2/getCountryFlagList2?serviceKey=1oqS8oZ%2BbCZjfuUwgC2PZ30Y7loXN9ZI%2Ff2aS2LyF0ZTh6jsCf7yzUmdWfq2ADrwi%2BZo87BqmOfPpJ9subOLfw%3D%3D&returnType=JSON&cond[country_iso_alp2::EQ]=${response.data.sys.country}`)
+                    .then(function (response2) {
+                        country_text.textContent = response2.data.data[0].country_nm
+                        console.log((response.data.sys.country).toLowerCase())
+                        flag.src = `https://flagcdn.com/h240/${(response.data.sys.country).toLowerCase()}.png`
+                        console.log(response2.data.data)
+                    })
                     lon_text.textContent = response.data.coord.lon
                     lat_text.textContent = response.data.coord.lat
 
+                    info_box.style.backgroundColor = 'rgba(40, 38, 38, 0.418)'
+                    feels.style.backgroundColor = '#181818b9'
+                    wind.style.backgroundColor = '#181818b9'
+
                     main_city_img.src = e.target.previousSibling.previousSibling.currentSrc
+                    city_text.textContent = response.data.name
+                    weatherImg.src = `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+                    main_temp_text.textContent = (response.data.main.temp-273.15).toFixed(2)
+                    main_feels_text.textContent = (response.data.main.feels_like-273.15).toFixed(2)
+                    main_wind_speed_text.textContent = (response.data.wind.speed)
+
+                    temp_text.textContent = (response.data.main.temp-273.15).toFixed(2)
+                    feels_text.textContent = (response.data.main.feels_like-273.15).toFixed(2)
+                    max_temp_text.textContent = (response.data.main.temp_max-273.15).toFixed(2)
+                    min_temp_text.textContent = (response.data.main.temp_min-273.15).toFixed(2)
+                    pressure_text.textContent = (response.data.main.pressure)
+                    humidity_text.textContent = (response.data.main.humidity)
+
+                    wind_speed_text.textContent = (response.data.wind.speed)
+                    deg = response.data.wind.deg
+                    deg_list = ['N','NbE','NNE','NEbN','NE','NEbE','ENE','EbN','E','EbS','ESE','SEbE','SE','SEbS','SSE','SbE','S','SbW','SSW','SWbS','SW','SWbW','WSW','WbS','W','WbN','WNW','NWbW','NW','NWbN','NNW','NbW']
+                    wind_deg_text.textContent = deg_list[Math.round(deg/10.90909090909091)-1]
+                })
+            }
+        })
+
+        document.addEventListener('keydown', (e) => {
+            console.log(e)
+            if (e.key == 'Enter') {
+                axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${input.value}&appid=${api_key}`)
+                .then(function (response) {
+                    console.log(response.data.sys.country)
+                    axios.get(`http://apis.data.go.kr/1262000/CountryFlagService2/getCountryFlagList2?serviceKey=1oqS8oZ%2BbCZjfuUwgC2PZ30Y7loXN9ZI%2Ff2aS2LyF0ZTh6jsCf7yzUmdWfq2ADrwi%2BZo87BqmOfPpJ9subOLfw%3D%3D&returnType=JSON&cond[country_iso_alp2::EQ]=${response.data.sys.country}`)
+                    .then(function (response2) {
+                        country_text.textContent = response2.data.data[0].country_nm
+                        console.log((response.data.sys.country).toLowerCase())
+                        flag.src = `https://flagcdn.com/h240/${(response.data.sys.country).toLowerCase()}.png`
+                        console.log(response2.data.data)
+                    })
+                    lon_text.textContent = response.data.coord.lon
+                    lat_text.textContent = response.data.coord.lat
+
+                    main_city_img.src = ` `
+                    info_box.style.backgroundColor = '#181818'
+                    feels.style.backgroundColor = '#363636'
+                    wind.style.backgroundColor = '#363636'
                     city_text.textContent = response.data.name
                     weatherImg.src = `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
                     main_temp_text.textContent = (response.data.main.temp-273.15).toFixed(2)
