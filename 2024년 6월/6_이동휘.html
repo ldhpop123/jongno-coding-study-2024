@@ -1,11 +1,260 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>6_이동휘</title>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" href="/2024년 6월/임시 css.css">
+    <style>
+        * {
+            margin: 0; padding: 0;
+            box-sizing: border-box;
+        }
+
+        *::selection {
+            background-color: #36363600;
+        }
+
+        body {
+            background-color: #000000;
+            display: flex;
+            padding: 8px;
+            height: 100vh;
+        }
+
+        aside {
+            min-width: 300px; width: 20%;
+            height: 100%;
+            margin-right: 8px;
+        }
+
+        aside > header {
+            width: 100%; height: 13%;
+            background-color: #181818;
+            margin-bottom: 8px;
+            border: none; border-radius: 8px;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        aside > .side_box {
+            width: 100%; height: 87%;
+            background-color: #181818;
+            border: none; border-radius: 8px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        aside > .side_box #flag {
+            width: 100%; height: 250px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+        }
+
+        aside > .side_box .location {
+            width: 100%;
+            margin-bottom: 30px;
+        }
+
+        .location > p {
+            color: #fff;
+            font-size: 15pt;
+        }
+
+        aside > .side_box .detail_temp {
+            width: 100%;
+            margin-bottom: 30px;
+        }
+
+        .detail_temp p{
+            color: #fff;
+            font-size: 12pt;
+            margin: 3px;
+        }
+
+        aside > .side_box .detail_wind {
+            width: 100%;
+            margin-bottom: 30px;
+        }
+
+        .detail_wind p {
+            color: #fff;
+            font-size: 12pt;
+            margin: 3px;
+        }
+
+        aside > .side_box .sun {
+            width: 100%;
+            margin-bottom: 30px;
+        }
+
+        .sun > p {
+            color: #fff;
+            font-size: 12pt;
+            margin: 3px;
+        }
+
+        .side_box > .reserved_box {
+            margin-bottom: 30px;
+        }
+
+        .side_box > .reserved_box p{
+            color: #fff;
+            font-size: 8pt;
+            margin: 3px;
+        }
+
+        main {
+            width: -webkit-calc(100% - 300px); height: 100%;
+        }
+
+        main > section {
+            width: 100%; height: 70%;
+            margin-bottom: 8px;
+        }
+
+        main > nav {
+            width: 100%; height: 30%;
+            background-color: #181818;
+            border: none; border-radius: 8px;
+        }
+
+        main > section > img { 
+            width: 100%; height: 100%;
+            border: none; border-radius: 8px;
+            background-color: #181818;
+        }
+
+        main > section > .info_box {
+            width: 100%; height: 100.3%;
+            border: none; border-radius: 8px;
+            background-color: rgba(40, 38, 38, 0.418);
+            transform: translate(0, -100.3%);
+            display: flex; position: relative;
+        }
+
+        .info_box > .info {
+            display: flex; flex-direction: column;
+            position: absolute;
+            top: 25%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            align-items: center;
+        }
+
+        .info_box > .info > .city_box {
+            display: flex;
+            width: 300px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .city_box #city_text {
+            color: #fff;
+            font-size: 35pt;
+            font-weight: bold;
+        }
+
+        .city_box #weatherImg {
+            width: 80px; height: 80px;
+        }
+
+        .info_box > .info > .temp_box {
+            width: 300px;
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+
+        .temp_box p {
+            position: absolute;
+            top: -35px;
+            font-size: 65pt;
+            color: #fff;
+        }
+
+        .info_box > .info > .all_temp {
+            width: 320px;
+            position: absolute;
+            top: 150px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .all_temp p {
+            color: #fff;
+            font-size: 11pt;
+            padding: 4px 10px;
+            background-color: #181818b9;
+            border: none; border-radius: 20px;
+        }
+
+        main > nav {
+            overflow-y: scroll;
+        }
+
+        main > nav::-webkit-scrollbar {
+            width: 15px;
+            background-color: #181818;
+            margin: 3px;
+        }
+
+        main > nav::-webkit-scrollbar-thumb {
+            background-color: #363636;
+            border-radius: 3px;
+            width: 10px;
+        }
+
+        main > nav > .input {
+            display: flex;
+            justify-content: center;
+            margin: 8px;
+        }
+
+        main > nav > .input > input {
+            width: 350px; height: 30px;
+            border: none; border-radius: 8px;
+            background-color: #363636;
+            padding: 5px; color: #fff;
+        }
+
+        main > nav > .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 380px);
+            gap: 15px;
+            padding: 20px;
+        }
+
+        nav > .container > .item {
+            height: 240px;
+            border: none; border-radius: 8px;
+            background-color: #202020;
+        }
+
+        nav > .container > .item > img {
+            width: 100%; height: 100%;
+            border: none; border-radius: 8px;
+        }
+
+        .item p {
+            width: 100%; height: 100%;
+            background-color: rgba(40, 38, 38, 0.694);
+            transform: translate(0, -101.7%);
+            border: none; border-radius: 8px;
+            color: #fff;
+            font-size: 20pt;
+            font-weight: bold;
+            cursor: pointer;
+            text-align: center;
+            line-height: 240px;
+        }
+
+        .item > p:hover {
+            background-color: rgba(40, 38, 38, 0.338);
+        }
+    </style>
 </head>
 <body>
     <aside>
@@ -14,30 +263,40 @@
         </header>
 
         <div class="side_box">
-            <img id="flag" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg/383px-Flag_of_the_United_Kingdom_%281-2%29.svg.png" alt="">
-            
-            <div class="location">
-                <p class="country_box">country <span id="country_text">영국</span></p>
-                <p class="location_box">lon <span id="lon_text">-0.1257</span> lat <span id="lat_text">51.5085</span></p>
-            </div>
-            
-            <div class="detail_temp">
-                <p class="temp_box">temp <span id="temp_text"></span>°C</p>
-                <P class="feels_temp_box">feels_like <span id="feels_text"></span>°C</P>
-                <p class="max_temp_box">max_temp <span id="max_temp_text"></span>°C</p>
-                <p class="min_temp_box">min_temp <span id="min_temp_text"></span>°C</p>
-                <p class="pressure_box">pressure <span id="pressure_text"></span>hPa</p>
-                <p class="humidity_box">humidity <span id="humidity_text"></span>%</p>
-            </div>
+            <div class="side_info">
+                <img id="flag" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg/383px-Flag_of_the_United_Kingdom_%281-2%29.svg.png" alt="">
+                
+                <div class="location">
+                    <p class="country_box">country <span id="country_text">영국</span></p>
+                    <p class="location_box">lon <span id="lon_text">-0.1257</span> lat <span id="lat_text">51.5085</span></p>
+                </div>
+                
+                <div class="detail_temp">
+                    <p class="temp_box">temp <span id="temp_text"></span>°C</p>
+                    <P class="feels_temp_box">feels_like <span id="feels_text"></span>°C</P>
+                    <p class="max_temp_box">max_temp <span id="max_temp_text"></span>°C</p>
+                    <p class="min_temp_box">min_temp <span id="min_temp_text"></span>°C</p>
+                    <p class="pressure_box">pressure <span id="pressure_text"></span>hPa</p>
+                    <p class="humidity_box">humidity <span id="humidity_text"></span>%</p>
+                </div>
 
-            <div class="detail_wind">
-                <p class="widn_speed_box">wind_speed <span id="wind_speed_text"></span>m/s</p>
-                <p class="wind_deg_box">wind_directiong <span id="wind_deg_text"></span></p>
-            </div>
+                <div class="detail_wind">
+                    <p class="widn_speed_box">wind_speed <span id="wind_speed_text"></span>m/s</p>
+                    <p class="wind_deg_box">wind_directiong <span id="wind_deg_text"></span></p>
+                </div>
 
-            <div class="sun">
-                <p class="sunrise_box">sunrise <span id="sunraise_text"></span></p>
-                <p class="sunset_box">sunset <span id="sunset_text"></span></p>
+                <div class="sun">
+                    <p class="sunrise_box">sunrise <span id="sunrise_text"></span></p>
+                    <p class="sunset_box">sunset <span id="sunset_text"></span></p>
+                </div>
+            </div>
+            
+            <div class="reserved_box">
+                <p>본 사이트는 상업적 목적이 아닌 개인 포트폴리오로 제작되었습니다.</p>
+                <p>주소 | 서울특별시 종로구 종로58길 28</p>
+                <p>전화 | 02-2237-0465</p>
+                <p>학과 소개 | 교육과정 | 학과 생활 | 진로 안내 | 활동 영상</p>
+                <p>Copyright (c) 종로산업정보학교 AIcomputer Department 이동휘 All right reserved</p>
             </div>
         </div>
     </aside>
@@ -57,9 +316,10 @@
                         <p><span id="main_temp_text"></span>°C</p>
                     </div>
 
-                    <div class="feelsANDwind">
-                        <p id="feels">Feels_like <span id="main_feels_text"></span>°C</p>
-                        <p id="wind">Wind <span id="main_wind_speed_text"></span>m/s</p>
+                    <div class="all_temp">
+                        <p id="feels">Feel <span id="main_feels_text"></span>°C</p>
+                        <p id="Max">Max <span id="main_max_text"></span>°C</p>
+                        <p id="Min">Min <span id="main_min_text"></span>°C</p>
                     </div>
                 </div>
             </div>
@@ -67,12 +327,13 @@
 
         <nav>
             <div class="input">
-                <input type="text">
+                <input type="text" placeholder="city name">
+                <p></p>
             </div>
 
             <div class="container">
                 <div class="item">
-                    <img src="https://img.freepik.com/free-photo/downtown-cityscape-night-seoul-south-korea_335224-272.jpg?t=st=1718737390~exp=1718740990~hmac=7bcd5f30345b15afbdd7800dd46f0178d3dd9d0143d3645c19e5105981dfe83a&w=2000" alt="seoul">
+                    <img src="https://img.freepik.com/free-photo/seoul-cityscape-twilight-south-korea_335224-273.jpg" alt="seoul">
                     <p>Seoul</p>
                 </div>
 
@@ -125,6 +386,28 @@
                     <img src="https://watermark.lovepik.com/photo/20211207/large/lovepik-european-famous-tourist-city-barcelona-spain-picture_501550770.jpg" alt="">
                     <p>Barcelona</p>
                 </div>
+
+                <div class="item">
+                    <img src="https://img1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/wlQ/image/XfAA4VUP6M8D2U4DJxx7xk2uaOk.JPG" alt="">
+                    <p>Shanghai</p>
+                </div>
+
+                <div class="item">
+                    <img src="https://i.namu.wiki/i/EIgHt7KtnBMFRY7rJf_fvqGVIR6EzI2Ck9-9mmRmQPtv8z1CuPGupCfreoNznKP1lrgJn1n7REi4CZ89gIQFQQ.webp" alt="">
+                    <p>Pyongyang</p>
+                </div>
+
+                <div class="item">
+                    <img src="https://www.gousa.or.kr/sites/default/files/styles/hero_l/public/images/hero_media_image/2016-10/a6473351eb9f2c424d969c50aad74661.jpeg?h=9c2070a3&itok=AQ1qhgbC" alt="">
+                    <p>Washington</p>
+                </div>
+            
+
+                <div class="item">
+                    <img src="https://www.gousa.or.kr/sites/default/files/styles/hero_l/public/images/hero_media_image/2017-05/4d7634a47020ece041aca08bd0c354fa.jpeg?h=64cea1ef&itok=UjFHPA1V" alt="">
+                    <p>Texas</p>
+                </div>
+
             </div>
         </nav>
     </main>
@@ -149,6 +432,8 @@
         
         let max_temp_text = document.querySelector('#max_temp_text');
         let min_temp_text = document.querySelector('#min_temp_text');
+        let main_max_text = document.querySelector('#main_max_text');
+        let main_min_text = document.querySelector('#main_min_text');
         let pressure_text = document.querySelector('#pressure_text');
         let humidity_text = document.querySelector('#humidity_text');
 
@@ -164,7 +449,8 @@
         let main_city_img = document.querySelector('#main_city_img')
 
         let feels = document.querySelector('#feels');
-        let wind = document.querySelector('#wind');
+        let Max = document.querySelector('#Max')
+        let Min = document.querySelector('#Min')
 
         axios.get(`https://api.openweathermap.org/data/2.5/weather?q=Tokyo&appid=${api_key}`)
                 .then(function (response) {
@@ -172,7 +458,8 @@
                     axios.get(`http://apis.data.go.kr/1262000/CountryFlagService2/getCountryFlagList2?serviceKey=1oqS8oZ%2BbCZjfuUwgC2PZ30Y7loXN9ZI%2Ff2aS2LyF0ZTh6jsCf7yzUmdWfq2ADrwi%2BZo87BqmOfPpJ9subOLfw%3D%3D&returnType=JSON&cond[country_iso_alp2::EQ]=${response.data.sys.country}`)
                     .then(function (response2) {
                         country_text.textContent = response2.data.data[0].country_nm
-                        flag.src = response2.data.data[0].download_url
+                        console.log((response.data.sys.country).toLowerCase())
+                        flag.src = `https://flagcdn.com/h240/${(response.data.sys.country).toLowerCase()}.png`
                         console.log(response2.data.data)
                     })
                     lon_text.textContent = response.data.coord.lon
@@ -180,13 +467,15 @@
 
                     info_box.style.backgroundColor = 'rgba(40, 38, 38, 0.418)'
                     feels.style.backgroundColor = '#181818b9'
-                    wind.style.backgroundColor = '#181818b9'
+                    Max.style.backgroundColor = '#181818b9'
+                    Min.style.backgroundColor = '#181818b9'
 
                     city_text.textContent = response.data.name
                     weatherImg.src = `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
                     main_temp_text.textContent = (response.data.main.temp-273.15).toFixed(2)
                     main_feels_text.textContent = (response.data.main.feels_like-273.15).toFixed(2)
-                    main_wind_speed_text.textContent = (response.data.wind.speed)
+                    main_max_text.textContent = (response.data.main.temp_max-273.15).toFixed(2)
+                    main_min_text.textContent = (response.data.main.temp_min-273.15).toFixed(2)
 
                     temp_text.textContent = (response.data.main.temp-273.15).toFixed(2)
                     feels_text.textContent = (response.data.main.feels_like-273.15).toFixed(2)
@@ -199,6 +488,9 @@
                     deg = response.data.wind.deg
                     deg_list = ['N','NbE','NNE','NEbN','NE','NEbE','ENE','EbN','E','EbS','ESE','SEbE','SE','SEbS','SSE','SbE','S','SbW','SSW','SWbS','SW','SWbW','WSW','WbS','W','WbN','WNW','NWbW','NW','NWbN','NNW','NbW']
                     wind_deg_text.textContent = deg_list[Math.round(deg/10.90909090909091)-1]
+
+                    sunrise_text.textContent = new Date((response.data.sys.sunrise)*1000).toLocaleString("ko-KR");
+                    sunset_text.textContent = new Date((response.data.sys.sunset)*1000).toLocaleString("ko-KR");
                 })
             
         nav.addEventListener('click', (e) => {
@@ -219,14 +511,15 @@
 
                     info_box.style.backgroundColor = 'rgba(40, 38, 38, 0.418)'
                     feels.style.backgroundColor = '#181818b9'
-                    wind.style.backgroundColor = '#181818b9'
-
+                    Max.style.backgroundColor = '#181818b9'
+                    Min.style.backgroundColor = '#181818b9'
                     main_city_img.src = e.target.previousSibling.previousSibling.currentSrc
                     city_text.textContent = response.data.name
                     weatherImg.src = `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
                     main_temp_text.textContent = (response.data.main.temp-273.15).toFixed(2)
                     main_feels_text.textContent = (response.data.main.feels_like-273.15).toFixed(2)
-                    main_wind_speed_text.textContent = (response.data.wind.speed)
+                    main_max_text.textContent = (response.data.main.temp_max-273.15).toFixed(2)
+                    main_min_text.textContent = (response.data.main.temp_min-273.15).toFixed(2)
 
                     temp_text.textContent = (response.data.main.temp-273.15).toFixed(2)
                     feels_text.textContent = (response.data.main.feels_like-273.15).toFixed(2)
@@ -239,6 +532,10 @@
                     deg = response.data.wind.deg
                     deg_list = ['N','NbE','NNE','NEbN','NE','NEbE','ENE','EbN','E','EbS','ESE','SEbE','SE','SEbS','SSE','SbE','S','SbW','SSW','SWbS','SW','SWbW','WSW','WbS','W','WbN','WNW','NWbW','NW','NWbN','NNW','NbW']
                     wind_deg_text.textContent = deg_list[Math.round(deg/10.90909090909091)-1]
+                    console.log(new Date((response.data.sys.sunrise)*1000).toLocaleString("ko-KR"))
+
+                    sunrise_text.textContent = new Date((response.data.sys.sunrise)*1000).toLocaleString("ko-KR");
+                    sunset_text.textContent = new Date((response.data.sys.sunset)*1000).toLocaleString("ko-KR");
                 })
             }
         })
@@ -248,26 +545,36 @@
             if (e.key == 'Enter') {
                 axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${input.value}&appid=${api_key}`)
                 .then(function (response) {
+                    console.log(response.data)
                     console.log(response.data.sys.country)
-                    axios.get(`http://apis.data.go.kr/1262000/CountryFlagService2/getCountryFlagList2?serviceKey=1oqS8oZ%2BbCZjfuUwgC2PZ30Y7loXN9ZI%2Ff2aS2LyF0ZTh6jsCf7yzUmdWfq2ADrwi%2BZo87BqmOfPpJ9subOLfw%3D%3D&returnType=JSON&cond[country_iso_alp2::EQ]=${response.data.sys.country}`)
-                    .then(function (response2) {
-                        country_text.textContent = response2.data.data[0].country_nm
-                        console.log((response.data.sys.country).toLowerCase())
-                        flag.src = `https://flagcdn.com/h240/${(response.data.sys.country).toLowerCase()}.png`
-                        console.log(response2.data.data)
-                    })
+
+                    if ((response.data.sys.country).toLowerCase() == 'kp') {
+                        country_text.textContent = '조선인민공화국'
+                        flag.src = `https://flagcdn.com/h240/kp.png`
+                    } else {
+                        axios.get(`http://apis.data.go.kr/1262000/CountryFlagService2/getCountryFlagList2?serviceKey=1oqS8oZ%2BbCZjfuUwgC2PZ30Y7loXN9ZI%2Ff2aS2LyF0ZTh6jsCf7yzUmdWfq2ADrwi%2BZo87BqmOfPpJ9subOLfw%3D%3D&returnType=JSON&cond[country_iso_alp2::EQ]=${response.data.sys.country}`)
+                            .then(function (response2) {
+                                country_text.textContent = response2.data.data[0].country_nm
+                                console.log((response.data.sys.country).toLowerCase())
+                                flag.src = `https://flagcdn.com/h240/${(response.data.sys.country).toLowerCase()}.png`
+                                console.log(response2.data.data)
+                            })
+                    }
+                    
                     lon_text.textContent = response.data.coord.lon
                     lat_text.textContent = response.data.coord.lat
 
                     main_city_img.src = ` `
                     info_box.style.backgroundColor = '#181818'
                     feels.style.backgroundColor = '#363636'
-                    wind.style.backgroundColor = '#363636'
+                    Max.style.backgroundColor = '#363636'
+                    Min.style.backgroundColor = '#363636'
                     city_text.textContent = response.data.name
                     weatherImg.src = `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
                     main_temp_text.textContent = (response.data.main.temp-273.15).toFixed(2)
                     main_feels_text.textContent = (response.data.main.feels_like-273.15).toFixed(2)
-                    main_wind_speed_text.textContent = (response.data.wind.speed)
+                    main_max_text.textContent = (response.data.main.temp_max-273.15).toFixed(2)
+                    main_min_text.textContent = (response.data.main.temp_min-273.15).toFixed(2)
 
                     temp_text.textContent = (response.data.main.temp-273.15).toFixed(2)
                     feels_text.textContent = (response.data.main.feels_like-273.15).toFixed(2)
@@ -280,6 +587,10 @@
                     deg = response.data.wind.deg
                     deg_list = ['N','NbE','NNE','NEbN','NE','NEbE','ENE','EbN','E','EbS','ESE','SEbE','SE','SEbS','SSE','SbE','S','SbW','SSW','SWbS','SW','SWbW','WSW','WbS','W','WbN','WNW','NWbW','NW','NWbN','NNW','NbW']
                     wind_deg_text.textContent = deg_list[Math.round(deg/10.90909090909091)-1]
+
+                    sunrise_text.textContent = new Date((response.data.sys.sunrise)*1000).toLocaleString("ko-KR");
+                    sunset_text.textContent = new Date((response.data.sys.sunset)*1000).toLocaleString("ko-KR");
+                    input.value = ''
                 })
             }
         })
