@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 300px; height: 300px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <script>
+        let box = document.querySelector('.box')
+
+        // setInterval. interval 간격
+
+        // setInterval(평선, 시간(ms))
+
+        let time = 1
+        let timer = setInterval(function() {
+            console.log(time)
+            time += 1
+
+            box.textContent = time
+        }, 1000) // 1000 = 1초
+
+        let timeout = setTimeout( function() {
+            // alert('5초 지남')
+            console.log(time)
+            box.textContent = '5초 지남'
+            clearInterval(timer)
+        }, 5000) // 5000 = 초
+
+        clearInterval(timer)
+        clearInterval(timeout)
+
+        let 병윤이갈구기 = setInterval(function() {
+            console.log('병윤아 병신이야?')
+        }, 1000)
+
+    </script>
+</body>
+</html>
