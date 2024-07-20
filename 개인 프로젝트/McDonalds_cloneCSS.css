@@ -1,0 +1,65 @@
+* {
+    box-sizing: border-box;
+    margin: 0; padding: 0;
+}
+
+body {
+    font-family: SpeedeeK, "Malgun Gothic", "맑은 고딕", Dotum, 돋움, Arial, sans-serif;
+}
+
+header {
+    width: 1150px; height: 140px;
+    display: flex; align-items: center;
+    justify-content: space-around;
+    margin: 0 auto;
+}
+
+header > .icon {
+    width: 106px; height: 93px;
+}
+
+header > ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+header > ul > li > p{
+    line-height: 140px;
+    margin-right: 85px; padding: 0 10px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+header > .tool {
+    width: 315px;
+    display: flex;
+    justify-content: space-around;
+}
+
+header > .tool > .tool_btn {
+    width: 80px; height: 36px;
+    color: #fff;
+    border: none;
+    border-radius: 36px;
+    padding: 2px 0 0;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.red {
+    background-color: #db0007;
+}
+
+.yellow {
+    background-color: #d87e00;
+}
+
+.green {
+    background-color: #264a36;
+}
+
+header > .tool > .search_icon{
+    width: 36px; height: 36px;
+    margin: 0 0 0 26px ;
+}
