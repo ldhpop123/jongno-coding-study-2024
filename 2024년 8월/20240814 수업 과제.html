@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 300px; height: 300px;
+        }
+        .container {
+            display: flex;
+            justify-content: space-around;
+        }
+    </style>
+</head>
+<body>
+    <h1>Your Shopping Cart</h1>
+    <p>forEach 함수를 사용할 것</p>
+    <p>Quantity의 각 버튼마다 동일한 event를 일괄 적용할 것</p>
+
+    <div class="container">
+        <div class="card">
+            <img src="https://cdn.dominos.co.kr/admin/upload/goods/20200311_x8StB1t3.jpg" alt="">
+            <p>Price: \<span>21000</span></p>
+            <input class="price" type="hidden" value="21000">
+            <label for="">Quantity <input class="Quantity" name="0" type="number"> </label>
+        </div>
+
+        <div class="card">
+            <img src="https://www.ejadam.co.kr/data/file/menuChicken/1795036817_4MrIjZLA_cc121a3503ebab66339889ee1e7359393678eab4.jpg" alt="">
+            <p>Price: \<span>21000</span></p>
+            <input class="price" type="hidden" value="21000">
+            <label for="">Quantity <input class="Quantity" name="1" type="number"> </label>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="container">
+        <div class="card">
+            <img src="https://www.ejadam.co.kr/data/file/menuChicken/1795036817_4MrIjZLA_cc121a3503ebab66339889ee1e7359393678eab4.jpg" alt="">
+            <p>Price: \<span>21000</span></p>
+            <input class="price" type="hidden" value="21000">
+            <label for="">Quantity <input class="Quantity" name="2" type="number"> </label>
+        </div>
+
+        <div class="card">
+            <img src="https://www.ejadam.co.kr/data/file/menuChicken/1795036817_4MrIjZLA_cc121a3503ebab66339889ee1e7359393678eab4.jpg" alt="">
+            <p>Price: \<span>21000</span></p>
+            <input class="price" type="hidden" value="21000">
+            <label for="">Quantity <input class="Quantity" name="3" type="number"> </label>
+        </div>
+    </div>
+
+    <hr>
+
+    <h1>Total: \<span id="Total">0</span></h1>
+
+    <script>
+        const Quantity = document.querySelectorAll('.Quantity')
+        const exCount = Array.from(Quantity).map(i => Number(i.value));
+
+        Quantity.forEach(function(tag) {
+            tag.addEventListener('change', (e) => {
+                parent = e.target.parentNode.parentNode
+                price = parent.querySelector('.price').value
+                count = e.target.value
+
+                total = document.querySelector('#Total').textContent
+                if (exCount[e.target.name] < count) {
+                    exCount[e.target.name] += 1
+                    document.querySelector('#Total').textContent = Number(total) + Number(price)
+                } else {
+                    exCount[e.target.name] -= 1
+                    document.querySelector('#Total').textContent = Number(total) - Number(price)
+                }
+            })
+        })
+    </script>
+</body>
+</html>
