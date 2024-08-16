@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <label for="">시간 설정 <input id="second" type="text" placeholder="">초 <button id="start">시작</button> <button id="stop">정지</button></label>
+    <h2>남은 시간</h2>
+    <p><span id="result"></span>s</p>
+    <p>초 입력하고 버튼을 누르면, 입력한 시간대로 타이머가 작동한다</p>
+    <p>0초일 때는 시작되지 않는다.</p>
+    <p>시작버튼을 여러번 눌러도 중복으로 적용되지 않는다.</p>
+    <p>정지버튼을 누르면 그 자리에서 멈춘다.</p>
+
+    <script>
+        const second_input = document.querySelector('#second');
+        const start_btn = document.querySelector('#start');
+        const stop_btn = document.querySelector('#stop');
+        const result = document.querySelector('#result');
+        let start_timeout = true
+
+        const timer = function(second) {
+            result.textContent = second
+            const interval = setInterval(function() {
+                result.textContent = Number(result.textContent) - 1
+            }, 1000)
+            timeout(second, interval)
+            start_timeout = false
+            return interval
+        }
+
+        const timeout = function(second, interval) {
+            setTimeout(function() {
+                clearInterval(interval)
+                start_timeout = true
+            }, second*1000)
+        }
+
+        start_btn.addEventListener('click', (e) =>  {
+            let second = second_input.value
+            console.log(start_timeout)
+            if (second && start_timeout) {
+                interval = timer(second)
+            } else if (second) {
+                clearInterval(interval)
+                interval = timer(second)
+            }
+        })
+
+        stop_btn.addEventListener('click', (e) =>  {
+            try {
+                timeout(second ,interval)
+            } catch(error) {
+                alert('실행 중인 타이머가 없습니다.')
+            }
+        })
+    </script>
+</body>
+</html>

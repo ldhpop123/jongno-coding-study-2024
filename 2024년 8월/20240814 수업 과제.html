@@ -63,7 +63,6 @@
 
         Quantity.forEach(function(tag) {
             tag.addEventListener('change', (e) => {
-                parent = e.target.parentNode.parentNode
                 price = parent.querySelector('.price').value
                 count = e.target.value
 

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>1. 일정 간격마다 함수 코드를 실행하는 것 (주기적으로 실행)</h2>
+    <h2>2. 일정 시간 후에 함수 코드를 실행 (타이머가 완료되면 한번 실행)</h2>
+
+    <script>
+        let value = 0
+        let inputInterval = function() {
+            console.log('1초 지남')
+        }
+        // 일정 시간 마다
+        let set = setInterval(inputInterval, 1000)// Interval: 간격 + 컴퓨터에서는 보통 1000이 1초
+
+
+        setTimeout(function () {
+            console.log('5초 지남')
+            clearInterval(set) // setInterval로 돌아가는 함수를 중지
+            console.log(set)
+        }, 5000)
+
+    </script>
+</body>
+</html>
