@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>promise</title>
+</head>
+<body>
+    <h1>프로미스 : promise : 약속</h1>
+
+    <script>
+        let promise = new Promise((win, lose) => {
+            if(true){
+                win('작업 성공')
+            } else {
+                lose('작업 실패')
+            }
+        })
+
+        promise.then((m) => {
+            console.log(m)
+        })
+        .catch((m) => {
+            console.log(m)
+        })
+    </script>
+</body>
+</html>
